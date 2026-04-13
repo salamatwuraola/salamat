@@ -101,8 +101,8 @@ const projects = [
     summary:'It is a portfolio which serve as an online CV for Salamat',
     tech:['HTML','JavaScript','CSS','Bootstrap'],
 
-    live:'https',
-    code:''
+    live:'https://salamatmw.vercel.app/',
+    code:'https://github.com/salamatwuraola/salamat'
   },
 
   {
