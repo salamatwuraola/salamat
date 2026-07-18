@@ -98,7 +98,7 @@ const projects = [
     tag:'Students Portal',
     title:'Haruna Rasheed Centre of Arabic and Islamic Studies',
     img:'Har.jpeg',
-    summary:'Full-Stack School Management Platform. Directory: /console/login(superadmin), /mange/login(admin) create admin account in superadmin (email:superadmin@mhr.com pass:5uper101@@!)',
+    summary:'Full-Stack School Management Platform. Directory: /console/login(superadmin), /mange/login(admin) create admin account in superadmin',
     tech:[ 'PHP', 'MySQL', 'JavaScript', 'Bootstrap', 'CSS', 'HTML', 'KoraPay'],
 
     live:'https://mhr.freedev.app/',
