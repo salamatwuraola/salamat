@@ -77,21 +77,10 @@ const projects = [
     title:'Al-Huda Prints Nigeria Ltd',
     img:'logo.png',
     summary:'Al-Huda is a frontend business website built with HTML, CSS, and Bootstrap. It features a product gallery, contact details, and admin dashboard.',
-    tech:['HTML','CSS','Bootstrap','JavaScript','React','Node.js','MongoDB','Express','AWS'],
+    tech:['HTML','CSS','Bootstrap','JavaScript'],
 
     live:'https://al-huda-prints.vercel.app/',
     code:'https://github.com/salamatwuraola/Al-Huda-Prints'
-  },
-
-  {
-    tag:'Captive Portal',
-    title:'SovastNet — Captive Portal',
-    img:'https://content.instructables.com/FHG/QVAE/MA88GN2U/FHGQVAEMA88GN2U.png?auto=webp',
-    summary:'Captive portal system that redirects users to pay for internet access before browsing.',
-    tech:['Vue.js','Socket.io','Express','Redis','PostgreSQL'],
-
-    live:'',
-    code:''
   },
 
   {
@@ -106,37 +95,15 @@ const projects = [
   },
 
   {
-    tag:'EdTech',
-    title:'LearnHub — LMS Platform',
-    img:'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900&q=80',
-    summary:'Learning platform with video lessons, quizzes, certificates, and progress tracking.',
-    tech:['React','Django','AWS S3','PostgreSQL','Celery','Redis'],
+    tag:'Students Portal',
+    title:'Haruna Rasheed Centre of Arabic and Islamic Studies',
+    img:'Har.jpeg',
+    summary:'Full-Stack School Management Platform. Directory: /console/login(superadmin), /mange/login(admin) create admin account in superadmin (email:superadmin@mhr.com pass:5uper101@@!)',
+    tech:[ 'PHP', 'MySQL', 'JavaScript', 'Bootstrap', 'CSS', 'HTML', 'KoraPay'],
 
-    live:'',
+    live:'https://mhr.freedev.app/',
     code:''
   },
-
-  {
-    tag:'Mobile-First',
-    title:'QuickBite — Food Delivery UI',
-    img:'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=900&q=80',
-    summary:'Mobile-first food ordering UI with cart flow and GPS tracking simulation.',
-    tech:['React Native','Firebase','Google Maps API','Expo'],
-
-    live:'',
-    code:''
-  },
-
-  {
-    tag:'SaaS',
-    title:'Portify — Portfolio Builder',
-    img:'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=900&q=80',
-    summary:'No-code SaaS tool for building portfolio websites with themes and analytics.',
-    tech:['Next.js','Node.js','MongoDB','Vercel','Stripe'],
-
-    live:'',
-    code:''
-  }
 ];
 
 
