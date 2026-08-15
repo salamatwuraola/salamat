@@ -109,7 +109,7 @@ const projects = [
     tag: 'News Website',
     title: 'Tech Pulse',
     img: 'tech.png',
-    summary: 'Full-Stack News Platform, with News API and Gemini API for news sumarizer',
+    summary: 'Full-Stack News Platform, with News API and Gemini API for news sumarizer (admin@caresync.local Admin@123)',
     tech: ['React.js', 'Node.js', 'Typescript', 'TailwindCSS', 'Express.js', 'Vercel'],
 
     live: 'https://tech-pulse-news-one.vercel.app/',
@@ -126,6 +126,7 @@ const projects = [
     live:'https://caresync.free.je/login.php',
     code:'https://github.com/salamatwuraola/CareSync'
   },
+
 ];
 
 
