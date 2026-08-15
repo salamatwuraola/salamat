@@ -109,7 +109,7 @@ const projects = [
     tag: 'News Website',
     title: 'Tech Pulse',
     img: 'tech.png',
-    summary: 'Full-Stack News Platform, with News API and Gemini API for news sumarizer (admin@caresync.local Admin@123)',
+    summary: 'Full-Stack News Platform, with News API and Gemini API for news sumarizer',
     tech: ['React.js', 'Node.js', 'Typescript', 'TailwindCSS', 'Express.js', 'Vercel'],
 
     live: 'https://tech-pulse-news-one.vercel.app/',
@@ -120,7 +120,7 @@ const projects = [
     tag:'Electronic Medical Record & Appointment Settings',
     title:'Care Sync',
     img:'care.png',
-    summary:'Full-Stack School Management Platform. Directory: /console/login(superadmin), /mange/login(admin) create admin account in superadmin (email:superadmin@mhr.com pass:5uper101@@!)',
+    summary:'Full-Stack EMR and Appointment Setting System; for small clins and big hospitals to mange their records and also book appointment for ouypatients to reduce wait time. (admin@caresync.local Admin@123)',
     tech:[ 'PHP', 'MySQL', 'JavaScript', 'Bootstrap', 'CSS', 'HTML'],
 
     live:'https://caresync.free.je/login.php',
