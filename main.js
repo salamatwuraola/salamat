@@ -98,7 +98,7 @@ const projects = [
     tag:'Students Portal',
     title:'Haruna Rasheed Centre of Arabic and Islamic Studies',
     img:'Har.jpeg',
-    summary:'Full-Stack School Management Platform. Directory: /console/login(superadmin), /mange/login(admin) create admin account in superadmin (email:superadmin@mhr.com pass:5uper101@@!)',
+    summary:'Full-Stack School Management Platform. Directory: /console/login(superadmin), /mange/login(admin) create admin account in superadmin (superadmin@mhr.com 5uper101@@!)',
     tech:[ 'PHP', 'MySQL', 'JavaScript', 'Bootstrap', 'CSS', 'HTML', 'KoraPay'],
 
     live:'https://mhr.freedev.app/',
@@ -114,7 +114,18 @@ const projects = [
 
     live: 'https://tech-pulse-news-one.vercel.app/',
     code: 'https://github.com/salamatwuraola/Tech-Pulse'
-  }
+  },
+
+  {
+    tag:'Electronic Medical Record & Appointment Settings',
+    title:'Care Sync',
+    img:'care.png',
+    summary:'Full-Stack School Management Platform. Directory: /console/login(superadmin), /mange/login(admin) create admin account in superadmin (email:superadmin@mhr.com pass:5uper101@@!)',
+    tech:[ 'PHP', 'MySQL', 'JavaScript', 'Bootstrap', 'CSS', 'HTML'],
+
+    live:'https://caresync.free.je/login.php',
+    code:'https://github.com/salamatwuraola/CareSync'
+  },
 ];
 
 
