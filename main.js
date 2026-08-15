@@ -98,12 +98,23 @@ const projects = [
     tag:'Students Portal',
     title:'Haruna Rasheed Centre of Arabic and Islamic Studies',
     img:'Har.jpeg',
-    summary:'Full-Stack School Management Platform. Directory: /console/login(superadmin), /mange/login(admin) create admin account in superadmin',
+    summary:'Full-Stack School Management Platform. Directory: /console/login(superadmin), /mange/login(admin) create admin account in superadmin (email:superadmin@mhr.com pass:5uper101@@!)',
     tech:[ 'PHP', 'MySQL', 'JavaScript', 'Bootstrap', 'CSS', 'HTML', 'KoraPay'],
 
     live:'https://mhr.freedev.app/',
     code:''
   },
+
+  {  
+    tag: 'News Website',
+    title: 'Tech Pulse',
+    img: 'tech.png',
+    summary: 'Full-Stack News Platform, with News API and Gemini API for news sumarizer',
+    tech: ['React.js', 'Node.js', 'Typescript', 'TailwindCSS', 'Express.js', 'Vercel'],
+
+    live: 'https://tech-pulse-news-one.vercel.app/',
+    code: 'https://github.com/salamatwuraola/Tech-Pulse'
+  }
 ];
 
 
