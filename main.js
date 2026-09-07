@@ -127,6 +127,17 @@ const projects = [
     code:'https://github.com/salamatwuraola/CareSync'
   },
 
+  {
+    tag:'Recipe Website',
+    title:'Hurry & Thyme',
+    img:'Hurry&Thyme.png',
+    summary:'Recipe website for quick and easy recipes.',
+    tech:['React.js','TailwindCSS','JavaScript','Node.js'],
+
+    live:'https://hurry-and-thyme.onrender.com/',
+    code:'https://github.com/salamatwuraola/hurry-and-thyme'
+  }
+
 ];
 
 
