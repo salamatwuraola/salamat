@@ -1,207 +1,317 @@
+/* Mustapha Salamat Wuraola — Portfolio Core Script
+ */
 
-    /*  NAVBAR SCROLL  */
-    const nav = document.getElementById('mainNav');
-    window.addEventListener('scroll',()=>{
-      nav.classList.toggle('scrolled', window.scrollY>60);
-    });
+document.addEventListener('DOMContentLoaded', () => {
 
-    /* ── ACTIVE NAV LINK ON SCROLL ── */
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-    const observer = new IntersectionObserver(entries=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){
-          navLinks.forEach(l=>l.classList.remove('active'));
-          const active = document.querySelector(`.navbar-nav .nav-link[href="#${e.target.id}"]`);
-          if(active) active.classList.add('active');
-        }
-      });
-    },{threshold:.35});
-    sections.forEach(s=>observer.observe(s));
+  /* ── 1. THEME TOGGLE (DARK / LIGHT WITH PERSISTENCE) ── */
+  const themeToggleBtn = document.getElementById('darkModeToggle');
+  const themeIcon = document.getElementById('themeIcon');
 
-    /* close mobile menu on link click */
-    navLinks.forEach(l=>{
-      l.addEventListener('click',()=>{
-        const collapse = document.getElementById('navMenu');
-        const bsCollapse = bootstrap.Collapse.getInstance(collapse);
-        if(bsCollapse) bsCollapse.hide();
-      });
-    });
-
-    /* ── TYPER ── */
-    const roles = ['FullStack Developer.','React Engineer.','Node.js Expert.','UI/UX Enthusiast.','Problem Solver.'];
-    let ri=0, ci=0, deleting=false;
-    const typer = document.getElementById('typer');
-    function type(){
-      const current = roles[ri];
-      if(!deleting){
-        typer.textContent = current.slice(0,ci+1); ci++;
-        if(ci===current.length){ deleting=true; setTimeout(type,1600); return; }
-      } else {
-        typer.textContent = current.slice(0,ci-1); ci--;
-        if(ci===0){ deleting=false; ri=(ri+1)%roles.length; }
+  function initTheme() {
+    const savedTheme = localStorage.getItem('salamat_theme');
+    // Default is dark; if user explicitly saved 'light', apply it
+    if (savedTheme === 'light') {
+      document.body.classList.add('light');
+      if (themeIcon) {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
       }
-      setTimeout(type, deleting?60:90);
+    } else {
+      document.body.classList.remove('light');
+      if (themeIcon) {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+      }
     }
-    type();
+  }
 
-    /* ── REVEAL ON SCROLL ── */
-    const reveals = document.querySelectorAll('.reveal');
-    const revealObs = new IntersectionObserver(entries=>{
-      entries.forEach((e,i)=>{
-        if(e.isIntersecting){
-          e.target.style.transitionDelay = (i%4)*0.1+'s';
-          e.target.classList.add('in-view');
-          revealObs.unobserve(e.target);
+  initTheme();
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      const isLight = document.body.classList.toggle('light');
+      localStorage.setItem('salamat_theme', isLight ? 'light' : 'dark');
+
+      if (themeIcon) {
+        if (isLight) {
+          themeIcon.classList.remove('fa-sun');
+          themeIcon.classList.add('fa-moon');
+        } else {
+          themeIcon.classList.remove('fa-moon');
+          themeIcon.classList.add('fa-sun');
+        }
+      }
+    });
+  }
+
+  /* ── 2. NAVBAR SCROLL & ACTIVE LINK SPY ── */
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    if (nav) {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    }
+  });
+
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        navLinks.forEach((link) => link.classList.remove('active'));
+        const activeLink = document.querySelector(`.navbar-nav .nav-link[href="#${entry.target.id}"]`);
+        if (activeLink) activeLink.classList.add('active');
+      }
+    });
+  }, { threshold: 0.3 });
+
+  sections.forEach((s) => navObserver.observe(s));
+
+  // Close mobile navigation menu on link click
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      const collapse = document.getElementById('navMenu');
+      if (collapse && window.bootstrap && window.bootstrap.Collapse) {
+        const bsCollapse = bootstrap.Collapse.getInstance(collapse);
+        if (bsCollapse) bsCollapse.hide();
+      }
+    });
+  });
+
+  /* ── 3. TYPEWRITER EFFECT ── */
+  const roles = [
+    'HealthTech & FHIR Specialist.',
+    'React & TypeScript Engineer.',
+    'Node.js & Python Developer.',
+    'Clinical Data Integrator.',
+    'Full-Stack Problem Solver.'
+  ];
+  let ri = 0, ci = 0, deleting = false;
+  const typer = document.getElementById('typer');
+
+  function typeEffect() {
+    if (!typer) return;
+    const current = roles[ri];
+    if (!deleting) {
+      typer.textContent = current.slice(0, ci + 1);
+      ci++;
+      if (ci === current.length) {
+        deleting = true;
+        setTimeout(typeEffect, 1800);
+        return;
+      }
+    } else {
+      typer.textContent = current.slice(0, ci - 1);
+      ci--;
+      if (ci === 0) {
+        deleting = false;
+        ri = (ri + 1) % roles.length;
+      }
+    }
+    setTimeout(typeEffect, deleting ? 50 : 85);
+  }
+
+  typeEffect();
+
+  /* ── 4. SCROLL REVEAL ANIMATION ── */
+  const reveals = document.querySelectorAll('.reveal');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in-view');
+        revealObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  reveals.forEach((r) => revealObs.observe(r));
+
+  /* ── 5. PROJECT CATEGORY FILTERING ── */
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const projectItems = document.querySelectorAll('.project-item');
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.dataset.filter;
+
+      projectItems.forEach((item) => {
+        const category = item.dataset.category || '';
+        if (filter === 'all' || category.includes(filter)) {
+          item.style.display = 'block';
+          setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'scale(1)';
+          }, 10);
+        } else {
+          item.style.opacity = '0';
+          item.style.transform = 'scale(0.96)';
+          setTimeout(() => {
+            item.style.display = 'none';
+          }, 250);
         }
       });
-    },{threshold:.12});
-    reveals.forEach(r=>revealObs.observe(r));
+    });
+  });
 
-    /* ── SKILL BARS ── */
-    const barFills = document.querySelectorAll('.skill-bar-fill');
-    const barObs = new IntersectionObserver(entries=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){
-          e.target.style.width = e.target.dataset.width+'%';
-          barObs.unobserve(e.target);
-        }
+  /* ── 6. ONE-CLICK EMAIL COPY WITH TOOLTIP ── */
+  const copyBtn = document.getElementById('copyEmailBtn');
+  const copyTooltip = document.getElementById('copyTooltip');
+
+  if (copyBtn && copyTooltip) {
+    copyBtn.addEventListener('click', () => {
+      const email = 'mustaphawuraola01@gmail.com';
+      navigator.clipboard.writeText(email).then(() => {
+        copyTooltip.classList.add('show');
+        setTimeout(() => {
+          copyTooltip.classList.remove('show');
+        }, 2200);
+      }).catch(() => {
+        // Fallback
+        const temp = document.createElement('input');
+        temp.value = email;
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand('copy');
+        document.body.removeChild(temp);
+        copyTooltip.classList.add('show');
+        setTimeout(() => {
+          copyTooltip.classList.remove('show');
+        }, 2200);
       });
-    },{threshold:.3});
-    barFills.forEach(b=>barObs.observe(b));
+    });
+  }
 
-   /* ── PROJECT MODAL DATA ── */
+});
+
+/* ── 7. PROJECT MODAL DATA & CONTROLLER ── */
 const projects = [
   {
-    tag:'Business Website',
-    title:'Al-Huda Prints Nigeria Ltd',
-    img:'logo.png',
-    summary:'Al-Huda is a frontend business website built with HTML, CSS, and Bootstrap. It features a product gallery, contact details, and admin dashboard.',
-    tech:['HTML','CSS','Bootstrap','JavaScript'],
-
-    live:'https://al-huda-prints.vercel.app/',
-    code:'https://github.com/salamatwuraola/Al-Huda-Prints'
+    tag: 'Commercial Web',
+    title: 'Al-Huda Prints Nigeria Ltd',
+    img: 'logo.png',
+    summary: 'A commercial frontend enterprise website built with HTML5, CSS3, and Bootstrap. Features include a dynamic product gallery, real-time quote request calculation, and customer contact routing.',
+    tech: ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript'],
+    live: 'https://al-huda-prints.vercel.app/',
+    code: 'https://github.com/salamatwuraola/Al-Huda-Prints'
   },
-
   {
-    tag:'Portfolio-Landing Page',
-    title:'Mustapha, Salamat Wuraola',
-    img:'Capture.PNG',
-    summary:'It is a portfolio which serve as an online CV for Salamat',
-    tech:['HTML','JavaScript','CSS','Bootstrap'],
-
-    live:'https://salamatmw.vercel.app/',
-    code:'https://github.com/salamatwuraola/salamat'
+    tag: 'Personal Portfolio',
+    title: 'Mustapha, Salamat Wuraola Portfolio',
+    img: 'Capture.PNG',
+    summary: 'A responsive developer portfolio presenting certifications, educational background, and technical case studies with clean semantic architecture.',
+    tech: ['HTML5', 'JavaScript', 'CSS3', 'Bootstrap'],
+    live: 'https://salamatmw.vercel.app/',
+    code: 'https://github.com/salamatwuraola/salamat'
   },
-
   {
-    tag:'Students Portal',
-    title:'Haruna Rasheed Centre of Arabic and Islamic Studies',
-    img:'Har.jpeg',
-    summary:'Full-Stack School Management Platform. Directory: /console/login(superadmin), /mange/login(admin) create admin account in superadmin (superadmin@mhr.com 5uper101@@!)',
-    tech:[ 'PHP', 'MySQL', 'JavaScript', 'Bootstrap', 'CSS', 'HTML', 'KoraPay'],
-
-    live:'https://mhr.freedev.app/',
-    code:''
+    tag: 'School Management & Fintech',
+    title: 'Haruna Rasheed Centre Portal',
+    img: 'Har.jpeg',
+    summary: 'Full-stack academic management and student records portal. Features role-based access control (superadmin, admin, student), result sheet generator, and KoraPay payment gateway integration.',
+    tech: ['PHP', 'MySQL', 'JavaScript', 'Bootstrap', 'CSS3', 'HTML5', 'KoraPay'],
+    live: 'https://mhr.freedev.app/',
+    code: ''
   },
-
-  {  
-    tag: 'News Website',
-    title: 'Tech Pulse',
+  {
+    tag: 'AI & REST APIs',
+    title: 'Tech Pulse: AI News Digest',
     img: 'tech.png',
-    summary: 'Full-Stack News Platform, with News API and Gemini API for news sumarizer',
-    tech: ['React.js', 'Node.js', 'Typescript', 'TailwindCSS', 'Express.js', 'Vercel'],
-
+    summary: 'Full-stack news aggregation platform integrating News API with Google Gemini AI for instant article synthesis and automated news summaries in seconds.',
+    tech: ['React.js', 'Node.js', 'TypeScript', 'TailwindCSS', 'Express.js', 'Gemini API', 'Vercel'],
     live: 'https://tech-pulse-news-one.vercel.app/',
     code: 'https://github.com/salamatwuraola/Tech-Pulse'
   },
-
   {
-    tag:'Electronic Medical Record & Appointment Settings',
-    title:'Care Sync',
-    img:'care.png',
-    summary:'Full-Stack EMR and Appointment Setting System; for small clins and big hospitals to mange their records and also book appointment for ouypatients to reduce wait time. (admin@caresync.local Admin@123)',
-    tech:[ 'PHP', 'MySQL', 'JavaScript', 'Bootstrap', 'CSS', 'HTML'],
-
-    live:'https://caresync.free.je/login.php',
-    code:'https://github.com/salamatwuraola/CareSync'
+    tag: 'HealthTech & EMR',
+    title: 'Care Sync EMR & Appointment System',
+    img: 'care.png',
+    summary: 'Full-stack Electronic Medical Record and outpatient appointment scheduling system engineered to minimize clinic waiting times and streamline patient record management across hospital departments.',
+    tech: ['PHP', 'MySQL', 'JavaScript', 'Bootstrap', 'HTML5', 'CSS3'],
+    live: 'https://caresync.free.je/login.php',
+    code: 'https://github.com/salamatwuraola/CareSync'
   },
-
   {
-    tag:'Recipe Website',
-    title:'Hurry & Thyme',
-    img:'Hurry&Thyme.png',
-    summary:'Recipe website for quick and easy recipes.',
-    tech:['React.js','TailwindCSS','JavaScript','Node.js'],
-
-    live:'https://hurry-and-thyme.onrender.com/',
-    code:'https://github.com/salamatwuraola/hurry-and-thyme'
+    tag: 'Web Application',
+    title: 'Hurry & Thyme Recipe Platform',
+    img: 'Hurry&Thyme.png',
+    summary: 'A fast, responsive recipe and culinary discovery web application featuring instant keyword search, nutrition breakdown, and dynamic dietary filtering.',
+    tech: ['React.js', 'TailwindCSS', 'JavaScript', 'Node.js'],
+    live: 'https://hurry-and-thyme.onrender.com/',
+    code: 'https://github.com/salamatwuraola/hurry-and-thyme'
   },
-
   {
-    tag:'FHIR Patient Chart Viewer',
-    title:'FHIR Patient Chart Viewer',
-    img:'fhir.png',
-    summary:'A production-ready HL7 FHIR R4 interoperability portfolio project demonstrating real-time clinical data rendering with a Node/Express proxy, defensive normalization, and a React dashboard',
-    tech:['React.js','TailwindCSS','JavaScript','Node.js'],
-
-    live:'https://fhir-p71r.onrender.com/',
-    code:'https://github.com/salamatwuraola/FHIR'
+    tag: 'HealthTech & Interoperability',
+    title: 'FHIR Patient Chart Viewer',
+    img: 'fhir.png',
+    summary: 'A production-ready HL7 FHIR R4 interoperability project demonstrating real-time clinical data rendering with a Node/Express proxy, defensive normalization, and a responsive React dashboard for clinical observations.',
+    tech: ['React.js', 'HL7 FHIR R4', 'TailwindCSS', 'JavaScript', 'Node.js', 'Express'],
+    live: 'https://fhir-p71r.onrender.com/',
+    code: 'https://github.com/salamatwuraola/FHIR'
   }
-
 ];
 
-
-function openModal(i){
+function openModal(i) {
   const p = projects[i];
+  if (!p) return;
 
-  document.getElementById('modalImg').src = p.img;
-  document.getElementById('modalTag').textContent = p.tag;
-  document.getElementById('modalTitle').textContent = p.title;
-  document.getElementById('modalSummary').textContent = p.summary;
+  const modalImg = document.getElementById('modalImg');
+  const modalTag = document.getElementById('modalTag');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalSummary = document.getElementById('modalSummary');
+  const modalTech = document.getElementById('modalTech');
+  const modalLinks = document.getElementById('modalLinks');
 
-  document.getElementById('modalTech').innerHTML =
-    p.tech.map(t => `<span class="tech-badge">${t}</span>`).join('');
+  if (modalImg) modalImg.src = p.img;
+  if (modalTag) modalTag.textContent = p.tag;
+  if (modalTitle) modalTitle.textContent = p.title;
+  if (modalSummary) modalSummary.textContent = p.summary;
 
-  /* dynamic buttons */
+  if (modalTech) {
+    modalTech.innerHTML = p.tech.map((t) => `<span class="tech-tag">${t}</span>`).join('');
+  }
+
   let linksHTML = '';
-
-  if(p.live){
+  if (p.live) {
     linksHTML += `
-      <a href="${p.live}" target="_blank"
-        class="btn-primary-custom"
-        style="font-size:.85rem;padding:10px 22px;text-decoration:none;">
-        <i class="fas fa-external-link-alt me-2"></i> Live Demo
+      <a href="${p.live}" target="_blank" rel="noopener" class="btn-primary-custom" style="font-size:.85rem;padding:10px 20px;">
+        <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+      </a>
+    `;
+  }
+  if (p.code) {
+    linksHTML += `
+      <a href="${p.code}" target="_blank" rel="noopener" class="btn-outline-custom" style="font-size:.85rem;padding:10px 20px;">
+        <i class="fab fa-github"></i> Source Code
       </a>
     `;
   }
 
-  if(p.code){
-    linksHTML += `
-      <a href="${p.code}" target="_blank"
-        class="btn-outline-custom"
-        style="font-size:.85rem;padding:9px 22px;text-decoration:none;">
-        <i class="fab fa-github me-2"></i> Source Code
-      </a>
-    `;
+  if (modalLinks) modalLinks.innerHTML = linksHTML;
+
+  const modalBackdrop = document.getElementById('projectModal');
+  if (modalBackdrop) {
+    modalBackdrop.classList.add('open');
+    document.body.style.overflow = 'hidden';
   }
-
-  document.getElementById('modalLinks').innerHTML = linksHTML;
-
-  document.getElementById('projectModal').classList.add('open');
-  document.body.style.overflow='hidden';
 }
 
-
-function closeModal(){
-  document.getElementById('projectModal').classList.remove('open');
-  document.body.style.overflow='';
+function closeModal() {
+  const modalBackdrop = document.getElementById('projectModal');
+  if (modalBackdrop) {
+    modalBackdrop.classList.remove('open');
+    document.body.style.overflow = '';
+  }
 }
 
-function closeModalOnBackdrop(e){
-  if(e.target === document.getElementById('projectModal')) closeModal();
+function closeModalOnBackdrop(e) {
+  if (e.target === document.getElementById('projectModal')) {
+    closeModal();
+  }
 }
 
-document.addEventListener('keydown', e=>{
-  if(e.key === 'Escape') closeModal();
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeModal();
 });
