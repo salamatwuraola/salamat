@@ -1,336 +1,534 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Designed and Developed by Salamat Wuraola
-Email: mustaphawuraola01@gmail.com
-Github: https://github.com/salamatwuraola
-Phone Number: +2348132793491 -->
+<!-- Designed and Developed by Mustapha Salamat Wuraola
+     Full-Stack Engineer & HealthTech Specialist
+     Email: mustaphawuraola01@gmail.com
+     Github: https://github.com/salamatwuraola
+     Phone: +2348132793491 -->
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mustapha Salamat Wuraola — FullStack Developer</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
-    rel="stylesheet" />
-  <link rel="icon" href="Salamat.jpeg">
+  <title>Mustapha Salamat Wuraola — Full-Stack Engineer & HealthTech Specialist</title>
+  <meta name="description" content="Portfolio of Mustapha Salamat Wuraola — Full-Stack Engineer specializing in React, Node.js, Python, and HL7 FHIR clinical interoperability." />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <link rel="icon" href="Salamat.jpeg" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="bootstrap.min.css" rel="stylesheet" />
   <script src="bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 
 <body>
+  <!-- ── NAVBAR ── -->
   <nav class="navbar navbar-expand-lg" id="mainNav">
     <div class="container">
-      <a class="navbar-brand" href="#hero">Salamat M W<span>.</span></a>
-      <div class="d-flex align-items-center">
-        <div class="theme-toggle" id="darkModeToggle" aria-label="Dark mode toggle">
-          <i class="fas fa-moon"></i>
-        </div>
-        <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-          <span class="navbar-toggler-icon"></span>
+      <a class="navbar-brand" href="#hero">
+        Salamat M W<span class="dot">.</span>
+        <span class="badge-tag">FullStack & HealthTech</span>
+      </a>
+
+      <div class="d-flex align-items-center gap-2 order-lg-3">
+        <button class="theme-toggle" id="darkModeToggle" aria-label="Toggle theme" title="Toggle dark/light theme">
+          <i class="fas fa-sun" id="themeIcon"></i>
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
         </button>
       </div>
-      <div class="collapse navbar-collapse" id="navMenu">
+
+      <div class="collapse navbar-collapse order-lg-2" id="navMenu">
         <ul class="navbar-nav ms-auto gap-1">
-          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#video-intro">Intro</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-          <li class="nav-item"><a class="nav-link" href="#cta">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
-  <!-- HERO SECTION -->
+
+  <!-- ── HERO SECTION ── -->
   <section id="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-grid-lines"></div>
     <div class="container">
       <div class="row align-items-center gy-5">
-        <div class="col-lg-7 hero-content">
-
-          <h1 class="hero-name">Hi, I'm<br><span class="orange">Salamat</span></h1>
-          <div class="hero-role">I'm a <span id="typer"></span><span class="cursor-blink"></span></div>
-          <p class="hero-desc">I craft beautiful, high-performance web experiences — from pixel-perfect frontends to
-            robust, scalable backends. Let's build something remarkable together.</p>
-          <div class="d-flex flex-wrap gap-3">
-            <a href="#projects" class="btn-primary-custom">View My Work</a>
-            <a href="#cta" class="btn-outline-custom">Get In Touch</a>
+        <div class="col-lg-7">
+          <div class="hero-status-pill">
+            <span class="pulse-dot"></span>
+            <span>Available for Full-Time & Contract Roles</span>
           </div>
+
+          <h1 class="hero-name">
+            Hi, I'm <span class="gradient-text">Salamat</span>
+          </h1>
+
+          <div class="hero-role">
+            Full-Stack Engineer & <span id="typer"></span><span class="cursor-blink"></span>
+          </div>
+
+          <p class="hero-desc">
+            Bridging software engineering with healthcare data rigor. I build high-integrity web applications, scalable backends, and HL7 FHIR clinical interoperability solutions with React, Node.js, and Python.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn-primary-custom">
+              <i class="fas fa-laptop-code"></i> Explore Projects
+            </a>
+            <a href="#contact" class="btn-outline-custom">
+              <i class="fas fa-paper-plane"></i> Get In Touch
+            </a>
+            <a href="Salamat's_CV.pdf" class="btn-outline-custom" download>
+              <i class="fas fa-file-arrow-down"></i> Download CV
+            </a>
+          </div>
+
           <div class="hero-socials">
-            <a href="https://github.com/salamatwuraola" class="hero-social-btn"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/salamat-wuraola-mustapha-bsc-mph-maiph-a750a91ba/"
-              class="hero-social-btn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://wa.me/2348132793491" class="hero-social-btn"><i class="fab fa-whatsapp"></i></a>
-            <a href="mailto:mustaphawuraola01@gmail.com" class="hero-social-btn"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/salamatwuraola" class="hero-social-btn" title="GitHub" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/salamat-wuraola-mustapha-bsc-mph-maiph-a750a91ba/" class="hero-social-btn" title="LinkedIn" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://wa.me/2348132793491" class="hero-social-btn" title="WhatsApp" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="mailto:mustaphawuraola01@gmail.com" class="hero-social-btn" title="Email Salamat">
+              <i class="fas fa-envelope"></i>
+            </a>
           </div>
         </div>
+
         <div class="col-lg-5">
-          <div class="hero-img-wrap">
-            <div class="hero-img-ring">
-              <img src=Salamat.jpeg alt="Mustapha Salamat" />
+          <div class="hero-image-stage">
+            <div class="hero-avatar-frame">
+              <img src="Salamat.jpeg" alt="Mustapha Salamat Wuraola" />
+            </div>
+
+            <!-- Crisp Solid Orbiting Badges -->
+            <div class="floating-badge badge-1">
+              <i class="fas fa-heartbeat" style="color:var(--emerald);"></i>
+              <span>HL7 FHIR R4</span>
+            </div>
+            <div class="floating-badge badge-2">
+              <i class="fab fa-react" style="color:#38bdf8;"></i>
+              <span>React & TypeScript</span>
+            </div>
+            <div class="floating-badge badge-3">
+              <i class="fab fa-node-js" style="color:#22c55e;"></i>
+              <span>Node & Express</span>
+            </div>
+            <div class="floating-badge badge-4">
+              <i class="fas fa-database" style="color:#a855f7;"></i>
+              <span>SQL & Cloud APIs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Strip -->
+      <div class="hero-metrics-strip reveal">
+        <div class="row g-3">
+          <div class="col-6 col-md-3">
+            <div class="metric-item">
+              <div class="metric-value">7+</div>
+              <div class="metric-label">Production Projects</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="metric-item">
+              <div class="metric-value">2+</div>
+              <div class="metric-label">Years of Experience</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="metric-item">
+              <div class="metric-value">MPH</div>
+              <div class="metric-label">Epidemiology & Data</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="metric-item">
+              <div class="metric-value">100%</div>
+              <div class="metric-label">Commitment & Integrity</div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
   </section>
 
-  <!-- SKILLS -->
-  <section id="skills">
+  <!-- ── ABOUT & THE HEALTHTECH EDGE ── -->
+  <section id="about">
     <div class="container">
       <div class="row mb-5">
-        <div class="col-lg-6 reveal">
-          <div class="section-label">What I work with</div>
-          <h2 class="section-title">My <span style="color:var(--accent)">Skills</span> &<br>Tech Stack</h2>
-        </div>
-        <div class="col-lg-6 d-flex align-items-end reveal">
-          <p style="color:var(--text-muted);">From designing interfaces to architecting backends, I'm comfortable across
-            the full spectrum.</p>
-        </div>
-      </div>
-      <div class="row gy-4 mb-4">
-        <div class="col-lg-6 reveal">
-          <div class="skill-category">
-            <div class="skill-cat-icon"><i class="fas fa-layer-group"></i></div>
-            <div class="skill-cat-title">Proficiency Overview</div>
-            <div class="skill-bar-row">
-              <div class="skill-bar-label"><span>Frontend</span><span>92%</span></div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill" data-width="92"></div>
-              </div>
-            </div>
-            <div class="skill-bar-row">
-              <div class="skill-bar-label"><span>Backend</span><span>85%</span></div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill" data-width="85"></div>
-              </div>
-            </div>
-            <div class="skill-bar-row">
-              <div class="skill-bar-label"><span>Database</span><span>80%</span></div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill" data-width="80"></div>
-              </div>
-            </div>
-            <div class="skill-bar-row">
-              <div class="skill-bar-label"><span>DevOps</span><span>72%</span></div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill" data-width="72"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 reveal">
-          <div class="skill-category">
-            <div class="skill-cat-icon"><i class="fab fa-react"></i></div>
-            <div class="skill-cat-title">Frontend</div>
-            <div><span class="skill-pill"><i class="fab fa-react"></i> React</span><span class="skill-pill"><i
-                  class="fab fa-vuejs"></i> Vue</span><span class="skill-pill"><i class="fab fa-js"></i>
-                JS/TS</span><span class="skill-pill"><i class="fab fa-bootstrap"></i> Bootstrap</span><span
-                class="skill-pill"><i class="fas fa-wind"></i> Tailwind</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="row gy-4">
-        <div class="col-md-4 reveal">
-          <div class="skill-category">
-            <div class="skill-cat-icon"><i class="fas fa-server"></i></div>
-            <div class="skill-cat-title">Backend</div>
-            <div><span class="skill-pill">Node.js</span><span class="skill-pill">Express</span><span
-                class="skill-pill">Python/Django</span><span class="skill-pill">REST/GraphQL</span></div>
-          </div>
-        </div>
-        <div class="col-md-4 reveal">
-          <div class="skill-category">
-            <div class="skill-cat-icon"><i class="fas fa-database"></i></div>
-            <div class="skill-cat-title">DB & Cloud</div>
-            <div><span class="skill-pill">MongoDB</span><span class="skill-pill">PostgreSQL</span><span
-                class="skill-pill">AWS</span><span class="skill-pill">Docker</span></div>
-          </div>
-        </div>
-        <div class="col-md-4 reveal">
-          <div class="skill-category">
-            <div class="skill-cat-icon"><i class="fas fa-tools"></i></div>
-            <div class="skill-cat-title">Tools</div>
-            <div><span class="skill-pill">Git/GitHub</span><span class="skill-pill">CI/CD</span><span
-                class="skill-pill">Figma</span><span class="skill-pill">Webpack</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--  PROJECTS  -->
-  <!--  PROJECTS  -->
-  <section id="projects">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-lg-6 reveal">
-          <div class="section-label">What I've built</div>
-          <h2 class="section-title">Featured <span style="color:var(--accent)">Projects</span></h2>
-        </div>
-        <div class="col-lg-6 d-flex align-items-end reveal">
-          <p style="color:var(--muted);font-size:.95rem;line-height:1.8;">
-            A curated selection of real-world projects — each one solving a genuine problem with clean code and
-            thoughtful design.
+        <div class="col-lg-7 reveal">
+          <div class="section-label">The Background & Edge</div>
+          <h2 class="section-title">
+            Bridging <span class="gradient-text">Public Health</span> & Software Engineering
+          </h2>
+          <p class="section-desc">
+            Unlike typical developers, I bring an advanced scientific research background (Master of Public Health in Epidemiology & Biostatistics) paired with rigorous full-stack development skills. This unique blend empowers me to architect healthcare and data-intensive systems with unmatched attention to data integrity, compliance, and clinical utility.
           </p>
         </div>
       </div>
 
+      <div class="row gy-4">
+        <div class="col-md-4 reveal">
+          <div class="about-card">
+            <div class="about-icon emerald">
+              <i class="fas fa-laptop-medical"></i>
+            </div>
+            <h3 class="about-title">HealthTech & Interoperability</h3>
+            <p class="about-text">
+              Hands-on expertise implementing HL7 FHIR R4 standards, clinical proxies, defensive data normalization, EMR record flows, and HIPAA-conscious architectures that connect doctors, patients, and health systems.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4 reveal">
+          <div class="about-card">
+            <div class="about-icon">
+              <i class="fas fa-layer-group"></i>
+            </div>
+            <h3 class="about-title">Robust Full-Stack Web</h3>
+            <p class="about-text">
+              Building end-to-end applications with modern frontend frameworks (React, Vue, TypeScript) backed by solid RESTful servers (Node.js, Express, Python, PHP) and optimized relational & NoSQL databases.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4 reveal">
+          <div class="about-card">
+            <div class="about-icon purple">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="about-title">Epidemiology & Data Rigor</h3>
+            <p class="about-text">
+              Trained in biostatistical analysis and epidemiological modeling. I treat data precision and workflow validation not as an afterthought, but as the foundational core of every digital product.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS SECTION ── -->
+  <section id="skills">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-6 reveal">
+          <div class="section-label">Technical Stack</div>
+          <h2 class="section-title">Skills & <span class="gradient-text">Core Competencies</span></h2>
+        </div>
+        <div class="col-lg-6 d-flex align-items-end reveal">
+          <p class="section-desc">
+            A versatile technology toolkit designed for clean code, high security, resilient database architectures, and seamless user experiences.
+          </p>
+        </div>
+      </div>
+
+      <div class="row gy-4">
+        <!-- 1. HealthTech & Standards -->
+        <div class="col-md-6 col-lg-3 reveal">
+          <div class="skill-box">
+            <div class="skill-header">
+              <div class="skill-icon"><i class="fas fa-heartbeat" style="color:var(--emerald);"></i></div>
+              <div class="skill-box-title">HealthTech & Standards</div>
+            </div>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill"><i class="fas fa-check"></i> HL7 FHIR R4</span>
+              <span class="skill-pill"><i class="fas fa-check"></i> EMR Systems</span>
+              <span class="skill-pill"><i class="fas fa-check"></i> Clinical Data Models</span>
+              <span class="skill-pill"><i class="fas fa-check"></i> Biostatistics</span>
+              <span class="skill-pill"><i class="fas fa-check"></i> Defensive Data Parsing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Frontend -->
+        <div class="col-md-6 col-lg-3 reveal">
+          <div class="skill-box">
+            <div class="skill-header">
+              <div class="skill-icon"><i class="fab fa-react" style="color:#38bdf8;"></i></div>
+              <div class="skill-box-title">Frontend Engineering</div>
+            </div>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill"><i class="fab fa-react"></i> React.js</span>
+              <span class="skill-pill"><i class="fab fa-js"></i> TypeScript</span>
+              <span class="skill-pill"><i class="fab fa-js"></i> JavaScript (ES6+)</span>
+              <span class="skill-pill"><i class="fab fa-vuejs"></i> Vue.js</span>
+              <span class="skill-pill"><i class="fas fa-wind"></i> TailwindCSS</span>
+              <span class="skill-pill"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+              <span class="skill-pill"><i class="fab fa-html5"></i> HTML5 & CSS3</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Backend -->
+        <div class="col-md-6 col-lg-3 reveal">
+          <div class="skill-box">
+            <div class="skill-header">
+              <div class="skill-icon"><i class="fas fa-server" style="color:#22c55e;"></i></div>
+              <div class="skill-box-title">Backend & APIs</div>
+            </div>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill"><i class="fab fa-node-js"></i> Node.js</span>
+              <span class="skill-pill"><i class="fas fa-network-wired"></i> Express.js</span>
+              <span class="skill-pill"><i class="fab fa-python"></i> Python / Django</span>
+              <span class="skill-pill"><i class="fab fa-php"></i> PHP</span>
+              <span class="skill-pill"><i class="fas fa-plug"></i> RESTful APIs</span>
+              <span class="skill-pill"><i class="fas fa-shield-halved"></i> JWT & Auth</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. DB & Cloud -->
+        <div class="col-md-6 col-lg-3 reveal">
+          <div class="skill-box">
+            <div class="skill-header">
+              <div class="skill-icon"><i class="fas fa-database" style="color:#a855f7;"></i></div>
+              <div class="skill-box-title">Databases & DevOps</div>
+            </div>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill"><i class="fas fa-database"></i> PostgreSQL</span>
+              <span class="skill-pill"><i class="fas fa-database"></i> MySQL</span>
+              <span class="skill-pill"><i class="fas fa-leaf"></i> MongoDB</span>
+              <span class="skill-pill"><i class="fab fa-docker"></i> Docker</span>
+              <span class="skill-pill"><i class="fab fa-git-alt"></i> Git / GitHub</span>
+              <span class="skill-pill"><i class="fas fa-cloud"></i> Vercel / Render</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS SECTION ── -->
+  <section id="projects">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-lg-7 reveal">
+          <div class="section-label">Featured Works</div>
+          <h2 class="section-title">Selected <span class="gradient-text">Projects</span></h2>
+          <p class="section-desc">
+            Production web solutions, from interoperable healthcare charts to full-stack portals and intelligent API platforms.
+          </p>
+        </div>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="project-filters reveal">
+        <button class="filter-btn active" data-filter="all">All Projects (7)</button>
+        <button class="filter-btn" data-filter="healthtech">HealthTech & Clinical</button>
+        <button class="filter-btn" data-filter="fullstack">Full-Stack Platforms</button>
+        <button class="filter-btn" data-filter="frontend">Frontend & APIs</button>
+      </div>
+
       <div class="row gy-4" id="projectsGrid">
 
-        <!-- PROJECT 7 -->
-        <div class="col-md-6 col-lg-4 reveal">
-          <div class="project-card" onclick="openModal(6)">
-            <div class="project-thumb">
-              <img src="fhir.png" alt="FHIR">
-              <div class="project-thumb-overlay"></div>
-              <div class="project-tag">FHIR</div>
-              <div class="project-view-btn"><i class="fas fa-expand-alt"></i></div>
+        <!-- PROJECT 1: FHIR (HealthTech) -->
+        <div class="col-md-6 col-lg-4 project-item reveal" data-category="healthtech">
+          <div class="project-card">
+            <div class="project-thumb-wrap" onclick="openModal(6)">
+              <img src="fhir.png" alt="HL7 FHIR Patient Chart Viewer" />
+              <div class="project-badge">HealthTech • HL7 FHIR</div>
+              <div class="project-zoom-indicator"><i class="fas fa-expand-alt"></i></div>
             </div>
             <div class="project-body">
-              <div class="project-title">FHIR Patient Chart Viewer</div>
-              <div class="project-desc">A production-ready HL7 FHIR R4 interoperability portfolio project</div>
-              <div class="project-tech">
-                <span class="tech-badge">React.js</span>
-                <span class="tech-badge">TailwindCSS</span>
-                <span class="tech-badge">JavaScript</span>
-                <span class="tech-badge">Node.js</span>
+              <h3 class="project-title" onclick="openModal(6)">FHIR Patient Chart Viewer</h3>
+              <p class="project-desc">
+                Production-ready HL7 FHIR R4 interoperability project rendering real-time clinical observations with a Node/Express proxy, defensive normalization, and a React dashboard.
+              </p>
+              <div class="project-tech-pills">
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">HL7 FHIR R4</span>
+                <span class="tech-tag">TailwindCSS</span>
+                <span class="tech-tag">Node.js</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://fhir-p71r.onrender.com/" target="_blank" rel="noopener" class="project-btn-link live">
+                  <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+                <a href="https://github.com/salamatwuraola/FHIR" target="_blank" rel="noopener" class="project-btn-link code">
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <button onclick="openModal(6)" class="project-btn-link modal-btn" title="View Case Study">
+                  <i class="fas fa-circle-info"></i>
+                </button>
               </div>
             </div>
           </div>
         </div>
-        <!-- PROJECT 6 -->
-        <div class="col-md-6 col-lg-4 reveal">
-          <div class="project-card" onclick="openModal(5)">
-            <div class="project-thumb">
-              <img src="Hurry&Thyme.png" alt="Hurry&Thyme">
-              <div class="project-thumb-overlay"></div>
-              <div class="project-tag">Recipe Website</div>
-              <div class="project-view-btn"><i class="fas fa-expand-alt"></i></div>
+
+        <!-- PROJECT 2: CareSync EMR (HealthTech, FullStack) -->
+        <div class="col-md-6 col-lg-4 project-item reveal" data-category="healthtech fullstack">
+          <div class="project-card">
+            <div class="project-thumb-wrap" onclick="openModal(4)">
+              <img src="care.png" alt="Care Sync EMR Platform" />
+              <div class="project-badge">HealthTech • EMR</div>
+              <div class="project-zoom-indicator"><i class="fas fa-expand-alt"></i></div>
             </div>
             <div class="project-body">
-              <div class="project-title">Hurry & Thyme</div>
-              <div class="project-desc">Recipe website for quick and easy recipes.</div>
-              <div class="project-tech">
-                <span class="tech-badge">React.js</span>
-                <span class="tech-badge">TailwindCSS</span>
-                <span class="tech-badge">JavaScript</span>
-                <span class="tech-badge">Node.js</span>
+              <h3 class="project-title" onclick="openModal(4)">Care Sync EMR & Appointment System</h3>
+              <p class="project-desc">
+                Full-stack Electronic Medical Record and outpatient appointment scheduling system engineered to minimize clinic waiting times and streamline patient record management.
+              </p>
+              <div class="project-tech-pills">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Bootstrap</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://caresync.free.je/login.php" target="_blank" rel="noopener" class="project-btn-link live">
+                  <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+                <a href="https://github.com/salamatwuraola/CareSync" target="_blank" rel="noopener" class="project-btn-link code">
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <button onclick="openModal(4)" class="project-btn-link modal-btn" title="View Case Study">
+                  <i class="fas fa-circle-info"></i>
+                </button>
               </div>
             </div>
           </div>
         </div>
-        <!-- PROJECT 1 -->
-        <div class="col-md-6 col-lg-4 reveal">
-          <div class="project-card" onclick="openModal(0)">
-            <div class="project-thumb">
+
+        <!-- PROJECT 3: Tech Pulse (FullStack, Frontend) -->
+        <div class="col-md-6 col-lg-4 project-item reveal" data-category="frontend fullstack">
+          <div class="project-card">
+            <div class="project-thumb-wrap" onclick="openModal(3)">
+              <img src="tech.png" alt="Tech Pulse News Platform" />
+              <div class="project-badge">AI & REST API</div>
+              <div class="project-zoom-indicator"><i class="fas fa-expand-alt"></i></div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title" onclick="openModal(3)">Tech Pulse: AI News Digest</h3>
+              <p class="project-desc">
+                Full-stack news aggregation platform integrating News API with Google Gemini AI for instant article synthesis and automated news summaries in seconds.
+              </p>
+              <div class="project-tech-pills">
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Gemini API</span>
+                <span class="tech-tag">Node/Express</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://tech-pulse-news-one.vercel.app/" target="_blank" rel="noopener" class="project-btn-link live">
+                  <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+                <a href="https://github.com/salamatwuraola/Tech-Pulse" target="_blank" rel="noopener" class="project-btn-link code">
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <button onclick="openModal(3)" class="project-btn-link modal-btn" title="View Case Study">
+                  <i class="fas fa-circle-info"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 4: Hurry & Thyme (Frontend) -->
+        <div class="col-md-6 col-lg-4 project-item reveal" data-category="frontend">
+          <div class="project-card">
+            <div class="project-thumb-wrap" onclick="openModal(5)">
+              <img src="Hurry&Thyme.png" alt="Hurry & Thyme Recipe Website" />
+              <div class="project-badge">Web Application</div>
+              <div class="project-zoom-indicator"><i class="fas fa-expand-alt"></i></div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title" onclick="openModal(5)">Hurry & Thyme</h3>
+              <p class="project-desc">
+                Fast, responsive culinary recipe web application featuring instant keyword search, nutrition breakdown, and dynamic dietary filtering.
+              </p>
+              <div class="project-tech-pills">
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">TailwindCSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Node.js</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://hurry-and-thyme.onrender.com/" target="_blank" rel="noopener" class="project-btn-link live">
+                  <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+                <a href="https://github.com/salamatwuraola/hurry-and-thyme" target="_blank" rel="noopener" class="project-btn-link code">
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <button onclick="openModal(5)" class="project-btn-link modal-btn" title="View Case Study">
+                  <i class="fas fa-circle-info"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 5: Haruna Rasheed Centre (FullStack) -->
+        <div class="col-md-6 col-lg-4 project-item reveal" data-category="fullstack">
+          <div class="project-card">
+            <div class="project-thumb-wrap" onclick="openModal(2)">
+              <img src="Har.jpeg" alt="Haruna Rasheed Centre School Platform" />
+              <div class="project-badge">Portal • Fintech</div>
+              <div class="project-zoom-indicator"><i class="fas fa-expand-alt"></i></div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title" onclick="openModal(2)">Haruna Rasheed Centre Portal</h3>
+              <p class="project-desc">
+                Comprehensive academic management platform supporting multi-role authentication (superadmin, admin, student), automated grade generation, and integrated KoraPay fee settlement.
+              </p>
+              <div class="project-tech-pills">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">KoraPay</span>
+                <span class="tech-tag">Bootstrap</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://mhr.freedev.app/" target="_blank" rel="noopener" class="project-btn-link live">
+                  <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+                <button onclick="openModal(2)" class="project-btn-link modal-btn ms-auto" title="View Case Study">
+                  <i class="fas fa-circle-info"></i> Details
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 6: Al-Huda Prints (Frontend) -->
+        <div class="col-md-6 col-lg-4 project-item reveal" data-category="frontend">
+          <div class="project-card">
+            <div class="project-thumb-wrap" onclick="openModal(0)">
               <img src="logo.png" alt="Al-Huda Prints Platform" />
-              <div class="project-thumb-overlay"></div>
-              <div class="project-tag">Business Website</div>
-              <div class="project-view-btn"><i class="fas fa-expand-alt"></i></div>
+              <div class="project-badge">Commercial Web</div>
+              <div class="project-zoom-indicator"><i class="fas fa-expand-alt"></i></div>
             </div>
             <div class="project-body">
-              <div class="project-title">Al-Huda Prints — Business Website</div>
-              <div class="project-desc">Full-stack frontend business websites built with html, css, and bootstrap.</div>
-              <div class="project-tech">
-                <span class="tech-badge">HTML</span>
-                <span class="tech-badge">CSS</span>
-                <span class="tech-badge">JavaScript</span>
+              <h3 class="project-title" onclick="openModal(0)">Al-Huda Prints Nigeria Ltd</h3>
+              <p class="project-desc">
+                Commercial enterprise web presence built with responsive components, dynamic print catalogue galleries, service calculators, and direct customer quote channels.
+              </p>
+              <div class="project-tech-pills">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Bootstrap</span>
               </div>
-            </div>
-          </div>
-        </div>
-        <!-- PROJECT 2 -->
-        <div class="col-md-6 col-lg-4 reveal">
-          <div class="project-card" onclick="openModal(2)">
-            <div class="project-thumb">
-              <img src="Har.jpeg">
-              <div class="project-thumb-overlay"></div>
-              <div class="project-tag">School Website and Students Portal</div>
-              <div class="project-view-btn"><i class="fas fa-expand-alt"></i></div>
-            </div>
-            <div class="project-body">
-              <div class="project-title">Haruna Rasheed Centre of Arabic and Islamic Studies</div>
-              <div class="project-desc">Full-Stack School Management Platform</div>
-              <div class="project-tech">
-                <span class="tech-badge">PHP</span>
-                <span class="tech-badge">MySQL</span>
-                <span class="tech-badge">BOOTSTRAP</span>
-                <span class="tech-badge">CSS</span>
-                <span class="tech-badge">Javascript</span>
-                <span class="tech-badge">HTML</span>
-                <span class="tech-badge">KoraPay</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- PROJECT 3 -->
-        <div class="col-md-6 col-lg-4 reveal">
-          <div class="project-card" onclick="openModal(1)">
-            <div class="project-thumb">
-              <img src="Capture.PNG">
-              <div class="project-thumb-overlay"></div>
-              <div class="project-tag">Portfolio-Landing Page</div>
-              <div class="project-view-btn"><i class="fas fa-expand-alt"></i></div>
-            </div>
-            <div class="project-body">
-              <div class="project-title">Mustapha, Salamat Wura</div>
-              <div class="project-desc">It is a portfolio which serve as an online CV for Salamat</div>
-              <div class="project-tech">
-                <span class="tech-badge">HTML</span>
-                <span class="tech-badge">BOOTSTRAP</span>
-                <span class="tech-badge">CSS</span>
-                <span class="tech-badge">Javascript</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- PROJECT 4 -->
-        <div class="col-md-6 col-lg-4 reveal">
-          <div class="project-card" onclick="openModal(3)">
-            <div class="project-thumb">
-              <img src="tech.png">
-              <div class="project-thumb-overlay"></div>
-              <div class="project-tag">News Website with RESTAPIs</div>
-              <div class="project-view-btn"><i class="fas fa-expand-alt"></i></div>
-            </div>
-            <div class="project-body">
-              <div class="project-title">Tech Pulse; Understanding News in Seconds</div>
-              <div class="project-desc">Full-Stack News Platform, with News API and Gemini API for news sumarizer</div>
-              <div class="project-tech">
-                <span class="tech-badge">React.js</span>
-                <span class="tech-badge">Node.js</span>
-                <span class="tech-badge">Typescript</span>
-                <span class="tech-badge">TailwindCSS</span>
-                <span class="tech-badge">Express.js</span>
-                <span class="tech-badge">Vercel</span>
-                <span class="tech-badge">Github</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- PROJECT 5 -->
-        <div class="col-md-6 col-lg-4 reveal">
-          <div class="project-card" onclick="openModal(4)">
-            <div class="project-thumb">
-              <img src="care.png">
-              <div class="project-thumb-overlay"></div>
-              <div class="project-tag">Electronic Medical Record & Appointment Settings</div>
-              <div class="project-view-btn"><i class="fas fa-expand-alt"></i></div>
-            </div>
-            <div class="project-body">
-              <div class="project-title">Care Sync</div>
-              <div class="project-desc">Full-Stack EMR and Appointment Setting System</div>
-              <div class="project-tech">
-                <span class="tech-badge">PHP</span>
-                <span class="tech-badge">MySQL</span>
-                <span class="tech-badge">BOOTSTRAP</span>
-                <span class="tech-badge">CSS</span>
-                <span class="tech-badge">Javascript</span>
-                <span class="tech-badge">HTML</span>
+              <div class="project-actions">
+                <a href="https://al-huda-prints.vercel.app/" target="_blank" rel="noopener" class="project-btn-link live">
+                  <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+                <a href="https://github.com/salamatwuraola/Al-Huda-Prints" target="_blank" rel="noopener" class="project-btn-link code">
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <button onclick="openModal(0)" class="project-btn-link modal-btn" title="View Case Study">
+                  <i class="fas fa-circle-info"></i>
+                </button>
               </div>
             </div>
           </div>
@@ -340,99 +538,90 @@ Phone Number: +2348132793491 -->
     </div>
   </section>
 
-  <!--  PROJECT MODAL  -->
+  <!-- ── PROJECT DETAILS MODAL (SOLID SURFACES) ── -->
   <div class="project-modal-backdrop" id="projectModal" onclick="closeModalOnBackdrop(event)">
     <div class="project-modal" id="projectModalInner">
-      <div class="modal-inner-wrap">
-        <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
-        <img class="modal-featured-img" id="modalImg" src="" alt="" />
-        <div class="modal-body-content">
-          <div class="modal-project-tag" id="modalTag"></div>
-          <div class="modal-title-text" id="modalTitle"></div>
-          <p class="modal-summary" id="modalSummary"></p>
-          <div class="project-tech mt-4" id="modalTech"></div>
-          <div class="modal-links" id="modalLinks"></div>
-        </div>
+      <button class="modal-close" onclick="closeModal()" aria-label="Close modal">
+        <i class="fas fa-times"></i>
+      </button>
+      <img class="modal-featured-img" id="modalImg" src="" alt="Project Preview" />
+      <div class="modal-body-content">
+        <div class="modal-project-tag" id="modalTag"></div>
+        <h2 class="modal-title-text" id="modalTitle"></h2>
+        <p class="modal-summary" id="modalSummary"></p>
+        <div class="project-tech-pills mt-3" id="modalTech"></div>
+        <div class="modal-links" id="modalLinks"></div>
       </div>
     </div>
   </div>
 
-  <!--  EDUCATION  -->
+  <!-- ── EDUCATION & CREDENTIALS ── -->
   <section id="education">
     <div class="container">
       <div class="row mb-5">
         <div class="col-lg-6 reveal">
-          <div class="section-label">My Background</div>
-          <h2 class="section-title">Education &<br><span style="color:var(--accent)">Credentials</span></h2>
+          <div class="section-label">Academic & Technical Credentials</div>
+          <h2 class="section-title">Education & <span class="gradient-text">Qualifications</span></h2>
+        </div>
+        <div class="col-lg-6 d-flex align-items-end reveal">
+          <p class="section-desc">
+            Combining postgraduate health science rigor with accredited software engineering training.
+          </p>
         </div>
       </div>
-      <div class="row">
+
+      <div class="row gy-4 align-items-center">
         <div class="col-lg-7">
           <div class="edu-timeline">
-
+            <!-- Degree 1 -->
             <div class="edu-item reveal">
               <div class="edu-dot"><i class="fas fa-graduation-cap"></i></div>
               <div class="edu-card">
                 <div class="edu-year">2022 — 2024</div>
-                <div class="edu-degree">MPH Public Health (Epidemiology & Biostatistics)</div>
-                <div class="edu-school">Al-Hikmah University, Nigeria</div>
+                <h3 class="edu-degree">Master of Public Health (MPH)</h3>
+                <div class="edu-school">Al-Hikmah University, Nigeria • Specialization in Epidemiology & Biostatistics</div>
+                <div class="edu-badge-tag">Epidemiological Research & Statistical Modeling</div>
               </div>
             </div>
 
+            <!-- Degree 2 -->
             <div class="edu-item reveal">
-              <div class="edu-dot"><i class="fas fa-graduation-cap"></i></div>
+              <div class="edu-dot"><i class="fas fa-dna"></i></div>
               <div class="edu-card">
-                <div class="edu-year">2016-2020</div>
-                <div class="edu-degree">B.Sc. Zoology</div>
+                <div class="edu-year">2016 — 2020</div>
+                <h3 class="edu-degree">B.Sc. Zoology</h3>
                 <div class="edu-school">University of Ilorin, Nigeria</div>
+                <div class="edu-badge-tag">Biological Sciences & Research Foundations</div>
               </div>
             </div>
 
+            <!-- Cert 1 & 2 -->
             <div class="edu-item reveal">
               <div class="edu-dot"><i class="fas fa-code"></i></div>
               <div class="edu-card">
                 <div class="edu-year">2025</div>
-                <div class="edu-degree">Software Development - Frontend Development</div>
+                <h3 class="edu-degree">Professional Software Development (Frontend & Backend)</h3>
                 <div class="edu-school">Ogunjobi Tech Hub</div>
-              </div>
-            </div>
-            <div class="edu-item reveal">
-              <div class="edu-dot"><i class="fas fa-code"></i></div>
-              <div class="edu-card">
-                <div class="edu-year">2025</div>
-                <div class="edu-degree">Software Development - Backend Development</div>
-                <div class="edu-school">Ogunjobi Tech Hub</div>
+                <div class="edu-badge-tag">Full-Stack Architecture, REST APIs, Databases</div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Stats -->
-        <div class="col-lg-5 d-flex align-items-center mt-4 mt-lg-0">
-          <div class="row gy-3 w-100">
-            <div class="col-6 reveal">
-              <div class="skill-category text-center">
-                <div style="font-family:var(--font-head);font-size:2.8rem;font-weight:800;color:var(--accent);">2</div>
-                <div style="color:var(--muted);font-size:.85rem;margin-top:4px;">Projects Shipped</div>
-              </div>
+        <!-- Highlight Credentials Card -->
+        <div class="col-lg-5">
+          <div class="skill-box reveal text-center p-4">
+            <div class="mb-3">
+              <i class="fas fa-certificate" style="font-size:2.5rem;color:var(--accent);"></i>
             </div>
-            <div class="col-6 reveal">
-              <div class="skill-category text-center">
-                <div style="font-family:var(--font-head);font-size:2.8rem;font-weight:800;color:var(--accent);">2+</div>
-                <div style="color:var(--muted);font-size:.85rem;margin-top:4px;">Years of Experience</div>
-              </div>
-            </div>
-            <div class="col-6 reveal">
-              <div class="skill-category text-center">
-                <div style="font-family:var(--font-head);font-size:2.8rem;font-weight:800;color:var(--accent);">2+</div>
-                <div style="color:var(--muted);font-size:.85rem;margin-top:4px;">Happy Clients</div>
-              </div>
-            </div>
-            <div class="col-6 reveal">
-              <div class="skill-category text-center">
-                <div style="font-family:var(--font-head);font-size:2.8rem;font-weight:800;color:var(--accent);">4</div>
-                <div style="color:var(--muted);font-size:.85rem;margin-top:4px;">Certifications</div>
-              </div>
+            <h3 class="about-title mb-2">Verified Technical Competence</h3>
+            <p class="about-text mb-4">
+              Equipped with deep domain knowledge across healthcare informatics, data warehousing, and modern JavaScript/Python software stacks.
+            </p>
+            <div class="d-flex justify-content-center gap-3">
+              <a href="Salamat's_CV.pdf" class="btn-primary-custom" download>
+                <i class="fas fa-file-pdf"></i> Download Official CV
+              </a>
             </div>
           </div>
         </div>
@@ -440,22 +629,42 @@ Phone Number: +2348132793491 -->
     </div>
   </section>
 
-  <!-- CTA -->
-  <section id="cta">
+  <!-- ── CONTACT SECTION ── -->
+  <section id="contact">
     <div class="container">
-      <div class="cta-box reveal text-center">
-        <div class="section-label justify-content-center">Let's collaborate</div>
-        <h2 class="section-title mt-2 mb-3">Ready to build<br>something <span
-            style="color:var(--accent)">amazing?</span></h2>
-        <p style="color:var(--text-muted);max-width:480px;margin:0 auto 36px;">I'm just one message away.</p>
-        <div class="d-flex justify-content-center gap-3"><a href="mailto:mustaphawuraola01@gmail.com"
-            class="btn-primary-custom"><i class="fas fa-paper-plane me-2"></i> Send a Message</a><a
-            href="Salamat's_CV.pdf" class="btn-outline-custom" download><i class="fas fa-download me-2"></i> Download
-            CV</a></div>
+      <div class="contact-card reveal">
+        <div class="section-label justify-content-center">Let's Collaborate</div>
+        <h2 class="section-title mt-2 mb-3">
+          Ready to build something <span class="gradient-text">remarkable?</span>
+        </h2>
+        <p class="section-desc mx-auto mb-4">
+          Whether you need a specialized HealthTech engineer for HL7 FHIR integration, a full-stack developer for a high-performance web platform, or an experienced contributor for your team — let's connect.
+        </p>
+
+        <!-- One-Click Copy Email Box -->
+        <div class="copy-email-box" id="copyEmailBtn" title="Click to copy email address">
+          <span class="copy-tooltip" id="copyTooltip">Copied to clipboard!</span>
+          <i class="fas fa-envelope copy-btn-icon"></i>
+          <span class="copy-email-address">mustaphawuraola01@gmail.com</span>
+          <i class="far fa-copy ms-2 text-muted"></i>
+        </div>
+
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="mailto:mustaphawuraola01@gmail.com" class="btn-primary-custom">
+            <i class="fas fa-paper-plane"></i> Send Direct Email
+          </a>
+          <a href="https://wa.me/2348132793491" target="_blank" rel="noopener" class="btn-emerald-custom">
+            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+          </a>
+          <a href="Salamat's_CV.pdf" class="btn-outline-custom" download>
+            <i class="fas fa-download"></i> Download Resume
+          </a>
+        </div>
       </div>
     </div>
   </section>
-  <!-- Floating Bar -->
+
+  <!-- ── FLOATING QUICK DOCK ── -->
   <div class="float-stack">
     <div class="float-row">
       <div class="float-label">Download CV</div>
@@ -465,78 +674,92 @@ Phone Number: +2348132793491 -->
     </div>
     <div class="float-row">
       <div class="float-label">WhatsApp</div>
-      <a href="https://wa.me/2348132793491" class="float-btn wa" title="WhatsApp" target="_blank">
+      <a href="https://wa.me/2348132793491" class="float-btn wa" title="Chat on WhatsApp" target="_blank" rel="noopener">
         <i class="fab fa-whatsapp"></i>
       </a>
     </div>
     <div class="float-row">
-      <div class="float-label">Send Email</div>
-      <a href="mailto:mustaphawuraola01@gmail.com" class="float-btn em" title="Email Me">
+      <div class="float-label">Email Me</div>
+      <a href="mailto:mustaphawuraola01@gmail.com" class="float-btn em" title="Send Email">
         <i class="fas fa-envelope"></i>
       </a>
     </div>
     <div class="float-row">
-      <div class="float-label">Call Me</div>
-      <a href="tel:+2348132793491" class="float-btn ph" title="Call">
+      <div class="float-label">Call Direct</div>
+      <a href="tel:+2348132793491" class="float-btn ph" title="Call Salamat">
         <i class="fas fa-phone"></i>
       </a>
     </div>
   </div>
 
-  <!-- Footer -->
+  <!-- ── FOOTER ── -->
   <footer>
     <div class="container">
       <div class="row gy-4">
         <div class="col-lg-4">
-          <div class="footer-brand">Mustapha Salamat Wuraola<span>.</span></div>
+          <div class="footer-brand">
+            Mustapha Salamat Wuraola<span>.</span>
+          </div>
           <p class="footer-desc">
-            FullStack Developer passionate about building clean, performant, and user-centric digital products.
+            Full-Stack Engineer & HealthTech Specialist bridging clinical data systems with high-performance web architecture.
           </p>
           <div class="footer-social">
-            <a href="https://github.com/salamatwuraola"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/salamat-wuraola-mustapha-bsc-mph-maiph-a750a91ba/"><i
-                class="fab fa-linkedin-in"></i></a>
-            <a href="https://wa.me/2348132793491"><i class="fab fa-whatsapp"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/salamatwuraola" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/salamat-wuraola-mustapha-bsc-mph-maiph-a750a91ba/" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://wa.me/2348132793491" target="_blank" rel="noopener" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:mustaphawuraola01@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
           </div>
         </div>
+
         <div class="col-sm-6 col-lg-2 offset-lg-1">
           <div class="footer-heading">Navigation</div>
           <a href="#hero" class="footer-link"><i class="fas fa-chevron-right"></i> Home</a>
-          <a href="#video-intro" class="footer-link"><i class="fas fa-chevron-right"></i> Intro</a>
+          <a href="#about" class="footer-link"><i class="fas fa-chevron-right"></i> About</a>
           <a href="#skills" class="footer-link"><i class="fas fa-chevron-right"></i> Skills</a>
           <a href="#projects" class="footer-link"><i class="fas fa-chevron-right"></i> Projects</a>
           <a href="#education" class="footer-link"><i class="fas fa-chevron-right"></i> Education</a>
+          <a href="#contact" class="footer-link"><i class="fas fa-chevron-right"></i> Contact</a>
         </div>
+
         <div class="col-sm-6 col-lg-2">
-          <div class="footer-heading">Services</div>
-          <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Web Development</a>
-          <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> API Development</a>
-          <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> UI/UX Design</a>
-          <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Consulting</a>
-          <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i> Code Review</a>
+          <div class="footer-heading">Specializations</div>
+          <div class="footer-link"><i class="fas fa-check"></i> HL7 FHIR R4</div>
+          <div class="footer-link"><i class="fas fa-check"></i> EMR Systems</div>
+          <div class="footer-link"><i class="fas fa-check"></i> Full-Stack React & Node</div>
+          <div class="footer-link"><i class="fas fa-check"></i> Python & SQL</div>
+          <div class="footer-link"><i class="fas fa-check"></i> Health Informatics</div>
         </div>
+
         <div class="col-lg-3">
           <div class="footer-heading">Get In Touch</div>
-          <a href="mailto:mustaphawuraola01@gmail.com" class="footer-link"><i class="fas fa-envelope"></i>
-            mustaphawuraola01@gmail.com</a>
-          <a href="https//wa.me/2348132793491" class="footer-link"><i class="fab fa-whatsapp"></i> +2348132793491</a>
-          <a href="tel:+2348132793491" class="footer-link"><i class="fas fa-phone"></i> +234 813 279 3491</a>
-          <a href="#" class="footer-link"><i class="fas fa-map-marker-alt"></i> Ilorin, Nigeria. Open to relocation and
-            remote worldwide</a>
+          <a href="mailto:mustaphawuraola01@gmail.com" class="footer-link">
+            <i class="fas fa-envelope"></i> mustaphawuraola01@gmail.com
+          </a>
+          <a href="https://wa.me/2348132793491" target="_blank" rel="noopener" class="footer-link">
+            <i class="fab fa-whatsapp"></i> +234 813 279 3491
+          </a>
+          <a href="tel:+2348132793491" class="footer-link">
+            <i class="fas fa-phone"></i> +234 813 279 3491
+          </a>
+          <div class="footer-link">
+            <i class="fas fa-map-marker-alt"></i> Ilorin, Nigeria • Available Globally (Remote)
+          </div>
         </div>
       </div>
 
       <hr class="footer-divider" />
 
       <div class="footer-bottom">
-        <div class="footer-copy">
-          &copy; 2025 <span>Mustapha Salamat</span>. All rights reserved.
+        <div>
+          &copy; 2026 <span>Mustapha Salamat Wuraola</span>. All rights reserved.
+        </div>
+        <div>
+          Built with precision, performance & care.
         </div>
       </div>
     </div>
   </footer>
-</body>
-<script src="main.js"></script>
 
+  <script src="main.js"></script>
+</body>
 </html>
