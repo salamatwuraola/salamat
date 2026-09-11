@@ -136,6 +136,17 @@ const projects = [
 
     live:'https://hurry-and-thyme.onrender.com/',
     code:'https://github.com/salamatwuraola/hurry-and-thyme'
+  },
+
+  {
+    tag:'FHIR Patient Chart Viewer',
+    title:'FHIR Patient Chart Viewer',
+    img:'fhir.png',
+    summary:'A production-ready HL7 FHIR R4 interoperability portfolio project demonstrating real-time clinical data rendering with a Node/Express proxy, defensive normalization, and a React dashboard',
+    tech:['React.js','TailwindCSS','JavaScript','Node.js'],
+
+    live:'https://fhir-p71r.onrender.com/',
+    code:'https://github.com/salamatwuraola/FHIR'
   }
 
 ];
