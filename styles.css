@@ -1005,8 +1005,8 @@ section {
     border: 1px solid var(--border);
     border-radius: var(--radius-xl);
     width: 100%;
-    max-width: 720px;
-    max-height: 90vh;
+    max-width: 780px;
+    max-height: 92vh;
     overflow-y: auto;
     position: relative;
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
@@ -1090,6 +1090,118 @@ section {
     margin-top: 24px;
     padding-top: 20px;
     border-top: 1px solid var(--border);
+}
+
+/* ── CASE STUDY: META ROW ── */
+.modal-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+.modal-meta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 5px 14px;
+    border-radius: var(--radius-full);
+}
+.modal-meta-badge i {
+    color: var(--accent);
+    font-size: 0.73rem;
+}
+
+/* ── CASE STUDY: SECTION BLOCKS ── */
+.case-section {
+    margin-bottom: 14px;
+    padding: 16px 18px 16px 22px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius-lg);
+}
+.case-section-label {
+    font-size: 0.71rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.case-section p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 0.94rem;
+    margin: 0;
+}
+
+/* ── CASE STUDY: FEATURES LIST ── */
+.case-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.case-features-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    color: var(--text-secondary);
+    font-size: 0.93rem;
+    line-height: 1.6;
+}
+.feat-check {
+    width: 17px;
+    height: 17px;
+    min-width: 17px;
+    border-radius: 50%;
+    background: var(--accent-subtle);
+    border: 1px solid var(--accent-glow);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+    color: var(--accent);
+    font-size: 0.58rem;
+}
+
+/* ── CASE STUDY: IMPACT METRICS GRID ── */
+.case-impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 6px;
+}
+.case-impact-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 13px 10px;
+    text-align: center;
+}
+.case-impact-value {
+    font-family: var(--font-head);
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1.2;
+    margin-bottom: 3px;
+}
+.case-impact-label {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    line-height: 1.4;
 }
 
 /* ── EDUCATION & CREDENTIALS ── */
