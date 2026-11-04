@@ -1,26 +1,30 @@
-/* Mustapha Salamat Wuraola — Portfolio Core Script
- */
+/* ─────────────────────────────────────────────────────────────
+   Mustapha Salamat Wuraola — Portfolio Core Script
+   Jonny Czar Editorial Style Interaction Engine
+   Solid Palette: #FF7E6B (Coral), #828C51 (Olive), #FFFFFF (White)
+   Default: Light Mode with #FFFFFF background
+   ───────────────────────────────────────────────────────────── */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ── 1. THEME TOGGLE (DARK / LIGHT WITH PERSISTENCE) ── */
+  /* ── 1. THEME TOGGLE (LIGHT BY DEFAULT WITH #FFF BACKGROUND) ── */
   const themeToggleBtn = document.getElementById('darkModeToggle');
   const themeIcon = document.getElementById('themeIcon');
 
   function initTheme() {
     const savedTheme = localStorage.getItem('salamat_theme');
-    // Default is dark; if user explicitly saved 'light', apply it
-    if (savedTheme === 'light') {
-      document.body.classList.add('light');
-      if (themeIcon) {
-        themeIcon.classList.remove('fa-sun');
-        themeIcon.classList.add('fa-moon');
-      }
-    } else {
+    // Default is light (#ffffff background); if user explicitly saved 'dark', apply dark
+    if (savedTheme === 'dark') {
       document.body.classList.remove('light');
       if (themeIcon) {
         themeIcon.classList.remove('fa-moon');
         themeIcon.classList.add('fa-sun');
+      }
+    } else {
+      document.body.classList.add('light');
+      if (themeIcon) {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
       }
     }
   }
@@ -63,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (activeLink) activeLink.classList.add('active');
       }
     });
-  }, { threshold: 0.3 });
+  }, { threshold: 0.25 });
 
   sections.forEach((s) => navObserver.observe(s));
 
@@ -77,6 +81,45 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  /* ── 2b. JONNY CZAR STICKY SIDEBAR ACTIVE SPY ── */
+  const sidebarLinks = document.querySelectorAll('.sidebar-nav-link');
+  const caseStudyItems = document.querySelectorAll('.project-item[id], #about, #skills, #education, #contact');
+
+  if (sidebarLinks.length && caseStudyItems.length) {
+    const sidebarObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          sidebarLinks.forEach((link) => link.classList.remove('active'));
+          const targetHref = `#${entry.target.id}`;
+          const activeSidebarLink = document.querySelector(`.sidebar-nav-link[href="${targetHref}"]`);
+          if (activeSidebarLink) activeSidebarLink.classList.add('active');
+        }
+      });
+    }, { threshold: 0.35, rootMargin: "-80px 0px -20% 0px" });
+
+    caseStudyItems.forEach((item) => sidebarObserver.observe(item));
+
+    // Smooth scroll with offset for sidebar links
+    sidebarLinks.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        const targetId = link.getAttribute('href');
+        if (targetId && targetId.startsWith('#')) {
+          const targetEl = document.querySelector(targetId);
+          if (targetEl) {
+            e.preventDefault();
+            const topOffset = 90;
+            const elementPosition = targetEl.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - topOffset;
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        }
+      });
+    });
+  }
 
   /* ── 3. TYPEWRITER EFFECT ── */
   const roles = [
@@ -113,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   typeEffect();
 
-  /* ── 4. SCROLL REVEAL ANIMATION (multi-directional) ── */
+  /* ── 4. SCROLL REVEAL ANIMATION ── */
   const revealSelectors = '.reveal, .reveal-left, .reveal-right, .reveal-scale';
   const reveals = document.querySelectorAll(revealSelectors);
   const revealObs = new IntersectionObserver((entries) => {
@@ -125,9 +168,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.1 });
 
-  reveals.forEach((r) => revealObs.observe(r));
+  reveals.forEach((r) => {
+    revealObs.observe(r);
+    const rect = r.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      r.classList.add('in-view');
+    }
+  });
 
-  /* ── 4b. SCROLL PROGRESS BAR ── */
+  /* ── 4b. SCROLL PROGRESS BAR (SOLID ACCENT) ── */
   const progressBar = document.getElementById('scroll-progress');
   function updateProgress() {
     if (!progressBar) return;
@@ -138,7 +187,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.addEventListener('scroll', updateProgress, { passive: true });
   updateProgress();
-
 
   /* ── 5. PROJECT CATEGORY FILTERING ── */
   const filterBtns = document.querySelectorAll('.filter-btn');
@@ -297,7 +345,7 @@ function openModal(i) {
   }
   if (p.code) {
     linksHTML += `
-      <a href="${p.code}" target="_blank" rel="noopener" class="btn-outline-custom" style="font-size:.85rem;padding:10px 20px;">
+      <a href="${p.code}" target="_blank" rel="noopener" class="btn-olive-custom" style="font-size:.85rem;padding:10px 20px;">
         <i class="fab fa-github"></i> Source Code
       </a>
     `;
