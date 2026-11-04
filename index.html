@@ -9,15 +9,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mustapha Salamat Wuraola — Full-Stack Engineer & HealthTech Specialist</title>
+  <title>Mustapha Salamat Wuraola — Full-Stack Engineer &amp; HealthTech Specialist</title>
   <meta name="description"
-    content="Portfolio of Mustapha Salamat Wuraola — Full-Stack Engineer specializing in React, Node.js, Python, and HL7 FHIR clinical interoperability." />
+    content="Portfolio of Mustapha Salamat Wuraola — Full-Stack Engineer &amp; HealthTech Specialist specializing in React, Node.js, Python, and HL7 FHIR clinical interoperability." />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
     rel="stylesheet" />
 
   <link rel="icon" href="Salamat.jpeg" />
@@ -27,21 +27,24 @@
   <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 
-<body>
-  <!-- Scroll progress indicator -->
+<body class="light">
+  <!-- Scroll progress indicator (Solid #FF7E6B) -->
   <div id="scroll-progress" aria-hidden="true"></div>
 
   <!-- ── NAVBAR ── -->
   <nav class="navbar navbar-expand-lg" id="mainNav">
     <div class="container">
       <a class="navbar-brand" href="#hero">
-        Salamat M W<span class="dot">.</span>
-        <span class="badge-tag">FullStack & HealthTech</span>
+        Mustapha Salamat<span class="dot">.</span>
+        <span class="badge-tag">Full-Stack &amp; HealthTech</span>
       </a>
 
       <div class="d-flex align-items-center gap-2 order-lg-3">
+        <a href="#contact" class="nav-cta-btn d-none d-sm-inline-flex">
+          <i class="fas fa-paper-plane"></i> Let's Talk
+        </a>
         <button class="theme-toggle" id="darkModeToggle" aria-label="Toggle theme" title="Toggle dark/light theme">
-          <i class="fas fa-sun" id="themeIcon"></i>
+          <i class="fas fa-moon" id="themeIcon"></i>
         </button>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
           aria-label="Toggle navigation">
@@ -52,41 +55,46 @@
       <div class="collapse navbar-collapse order-lg-2" id="navMenu">
         <ul class="navbar-nav ms-auto gap-1">
           <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#highlights">Highlights</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Case Studies</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Stack</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Credentials</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- ── HERO SECTION ── -->
+  <!-- ── HERO SECTION (JONNY CZAR EDITORIAL STYLE) ── -->
   <section id="hero">
     <div class="container">
       <div class="row align-items-center gy-5">
         <div class="col-lg-7">
-          <p class="hero-available-text">Available for Full-Time &amp; Contract Roles</p>
-
-          <h1 class="hero-name">
-            Hi, I'm <span class="gradient-text">Salamat</span>
-          </h1>
-
-          <div class="hero-role">
-            Full-Stack Engineer & <span id="typer"></span><span class="cursor-blink"></span>
+          <div class="hero-status-pill">
+            <span class="status-indicator-dot"></span>
+            <span class="hero-status-text">Available for Full-Time &amp; Contract Roles</span>
           </div>
 
-          <p class="hero-desc">
-            Bridging software engineering with healthcare data rigor. I build high-integrity web applications, scalable
-            backends, and HL7 FHIR clinical interoperability solutions with React, Node.js, and Python.
+          <h1 class="hero-editorial-headline">
+            Hi, I'm <span class="highlight-coral">Salamat</span>
+          </h1>
+
+          <div class="hero-dynamic-role">
+            Full-Stack Engineer &amp; <span id="typer"></span><span class="cursor-blink"></span>
+          </div>
+
+          <p class="hero-lead-summary">
+            Bridging software engineering with healthcare data rigor. Master of Public Health (MPH) in Epidemiology
+            &amp; Biostatistics paired with scalable full-stack development in React, Node.js, Python, and HL7 FHIR
+            clinical interoperability.
           </p>
 
-          <div class="hero-actions">
+          <div class="hero-buttons-row">
             <a href="#projects" class="btn-primary-custom">
-              <i class="fas fa-laptop-code"></i> Explore Projects
+              <i class="fas fa-layer-group"></i> Explore Case Studies
             </a>
-            <a href="#contact" class="btn-outline-custom">
+            <a href="#contact" class="btn-olive-custom">
               <i class="fas fa-paper-plane"></i> Get In Touch
             </a>
             <a href="Salamat's_CV.pdf" class="btn-outline-custom" download>
@@ -94,21 +102,19 @@
             </a>
           </div>
 
-          <div class="hero-socials">
-            <a href="https://github.com/salamatwuraola" class="hero-social-btn" title="GitHub" target="_blank"
-              rel="noopener">
-              <i class="fab fa-github"></i>
+          <div class="hero-socials-grid">
+            <a href="https://github.com/salamatwuraola" class="hero-social-pill" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i> <span>GitHub</span>
             </a>
             <a href="https://www.linkedin.com/in/salamat-wuraola-mustapha-bsc-mph-maiph-a750a91ba/"
-              class="hero-social-btn" title="LinkedIn" target="_blank" rel="noopener">
-              <i class="fab fa-linkedin-in"></i>
+              class="hero-social-pill" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin-in"></i> <span>LinkedIn</span>
             </a>
-            <a href="https://wa.me/2348132793491" class="hero-social-btn" title="WhatsApp" target="_blank"
-              rel="noopener">
-              <i class="fab fa-whatsapp"></i>
+            <a href="https://wa.me/2348132793491" class="hero-social-pill" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i> <span>WhatsApp</span>
             </a>
-            <a href="mailto:mustaphawuraola01@gmail.com" class="hero-social-btn" title="Email Salamat">
-              <i class="fas fa-envelope"></i>
+            <a href="mailto:mustaphawuraola01@gmail.com" class="hero-social-pill">
+              <i class="fas fa-envelope"></i> <span>Email</span>
             </a>
           </div>
         </div>
@@ -121,51 +127,529 @@
 
             <!-- Crisp Solid Orbiting Badges -->
             <div class="floating-badge badge-1">
-              <i class="fas fa-heartbeat" style="color:var(--emerald);"></i>
+              <i class="fas fa-heartbeat" style="color:var(--olive);"></i>
               <span>HL7 FHIR R4</span>
             </div>
             <div class="floating-badge badge-2">
-              <i class="fab fa-react" style="color:#38bdf8;"></i>
-              <span>React & TypeScript</span>
+              <i class="fab fa-react" style="color:var(--coral);"></i>
+              <span>React &amp; TypeScript</span>
             </div>
             <div class="floating-badge badge-3">
-              <i class="fab fa-node-js" style="color:#22c55e;"></i>
-              <span>Node & Express</span>
+              <i class="fab fa-node-js" style="color:var(--olive);"></i>
+              <span>Node &amp; Express</span>
             </div>
             <div class="floating-badge badge-4">
-              <i class="fas fa-database" style="color:#a855f7;"></i>
-              <span>SQL & Cloud APIs</span>
+              <i class="fas fa-dna" style="color:var(--coral);"></i>
+              <span>MPH Biostatistics</span>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Quick Metrics Strip -->
-      <div class="hero-metrics-strip reveal">
-        <div class="row g-3">
-          <div class="col-6 col-md-3">
-            <div class="metric-item">
-              <div class="metric-value">7+</div>
-              <div class="metric-label">Production Projects</div>
-            </div>
+  <!-- ── TECH & STANDARDS TICKER STRIP ── -->
+  <div class="tech-standards-strip">
+    <div class="container">
+      <div class="ticker-wrap">
+        <div class="ticker-item"><span class="ticker-dot"></span> HL7 FHIR R4</div>
+        <div class="ticker-item olive-tag"><span class="ticker-dot"></span> React.js</div>
+        <div class="ticker-item"><span class="ticker-dot"></span> TypeScript</div>
+        <div class="ticker-item olive-tag"><span class="ticker-dot"></span> Node.js</div>
+        <div class="ticker-item"><span class="ticker-dot"></span> Python</div>
+        <div class="ticker-item olive-tag"><span class="ticker-dot"></span> PostgreSQL</div>
+        <div class="ticker-item"><span class="ticker-dot"></span> MySQL</div>
+        <div class="ticker-item olive-tag"><span class="ticker-dot"></span> Docker</div>
+        <div class="ticker-item"><span class="ticker-dot"></span> Express.js</div>
+        <div class="ticker-item olive-tag"><span class="ticker-dot"></span> Clinical Data Models</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── JONNY CZAR HIGHLIGHTS GRID ── -->
+  <section id="highlights">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-lg-7 reveal-left">
+          <div class="section-label olive-label">Career Highlights</div>
+          <h2 class="section-title">
+            Key <span class="coral-text">Highlights</span> &amp; Domain Expertise
+          </h2>
+          <p class="section-desc">
+            A proven record of engineering clinical-grade applications, scalable web portals, and defensible health data
+            architectures.
+          </p>
+        </div>
+      </div>
+
+      <div class="highlights-grid">
+        <!-- Highlight 1 -->
+        <div class="highlight-box reveal">
+          <div class="highlight-icon-wrap">
+            <i class="fas fa-graduation-cap"></i>
           </div>
-          <div class="col-6 col-md-3">
-            <div class="metric-item">
-              <div class="metric-value">2+</div>
-              <div class="metric-label">Years of Experience</div>
-            </div>
+          <div class="highlight-pretitle">Academic Foundation</div>
+          <h3 class="highlight-title">Master of Public Health (MPH)</h3>
+          <p class="highlight-desc">
+            Specialized in Epidemiology &amp; Biostatistics from Al-Hikmah University. Applies advanced statistical
+            methodologies, validation pipelines, and clinical data validity to every software system.
+          </p>
+          <div class="highlight-meta-tag">
+            <span>Epidemiology &amp; Biostatistics</span> <i class="fas fa-arrow-right"></i>
           </div>
-          <div class="col-6 col-md-3">
-            <div class="metric-item">
-              <div class="metric-value">MPH</div>
-              <div class="metric-label">Epidemiology & Data</div>
-            </div>
+        </div>
+
+        <!-- Highlight 2 -->
+        <div class="highlight-box olive-variant reveal delay-1">
+          <div class="highlight-icon-wrap">
+            <i class="fas fa-heartbeat"></i>
           </div>
-          <div class="col-6 col-md-3">
-            <div class="metric-item">
-              <div class="metric-value">100%</div>
-              <div class="metric-label">Commitment & Integrity</div>
+          <div class="highlight-pretitle">Health Informatics</div>
+          <h3 class="highlight-title">HL7 FHIR R4 Interoperability</h3>
+          <p class="highlight-desc">
+            Architected production-ready clinical proxies that ingest and defensively normalize EHR observations,
+            enabling practitioner dashboards and HIPAA-conscious workflows.
+          </p>
+          <div class="highlight-meta-tag">
+            <span>Clinical Data Systems</span> <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+
+        <!-- Highlight 3 -->
+        <div class="highlight-box reveal delay-2">
+          <div class="highlight-icon-wrap">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <div class="highlight-pretitle">Full-Stack Delivery</div>
+          <h3 class="highlight-title">7+ Production Applications</h3>
+          <p class="highlight-desc">
+            Engineered end-to-end solutions spanning healthcare charts, AI news aggregation with Google Gemini, fintech
+            fee settlement with KoraPay, and responsive enterprise portals.
+          </p>
+          <div class="highlight-meta-tag">
+            <span>Production Engineering</span> <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+
+        <!-- Highlight 4 -->
+        <div class="highlight-box olive-variant reveal delay-3">
+          <div class="highlight-icon-wrap">
+            <i class="fas fa-shield-halved"></i>
+          </div>
+          <div class="highlight-pretitle">Data Rigor</div>
+          <h3 class="highlight-title">Defensive Software Design</h3>
+          <p class="highlight-desc">
+            Trained in rigorous data verification, RESTful API contract enforcement, JWT security authentication, and
+            resilient relational database schemas in PostgreSQL &amp; MySQL.
+          </p>
+          <div class="highlight-meta-tag">
+            <span>Security &amp; Integrity</span> <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── JONNY CZAR SIGNATURE WORK & CASE STUDIES SECTION ── -->
+  <section id="projects">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 reveal-left">
+          <div class="section-label">Selected Works</div>
+          <h2 class="section-title">
+            Production <span class="coral-text">Case Studies</span>
+          </h2>
+          <p class="section-desc">
+            Production web solutions, from interoperable healthcare charts to full-stack portals and intelligent API
+            platforms.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2-Column Desktop Layout (Jonny Czar Sticky Sidebar Benchmark) -->
+      <div class="row g-4 work-section-layout">
+
+        <!-- Left Sticky Case Studies Navigation Sidebar -->
+        <div class="col-lg-3 d-none d-lg-block">
+          <div class="sticky-work-sidebar">
+            <div class="sidebar-heading">Case Studies</div>
+            <ul class="sidebar-nav-list">
+              <li class="sidebar-nav-item">
+                <a href="#case-fhir" class="sidebar-nav-link active">
+                  <i class="fas fa-heartbeat"></i> <span>FHIR Chart Viewer</span>
+                </a>
+              </li>
+              <li class="sidebar-nav-item">
+                <a href="#case-caresync" class="sidebar-nav-link">
+                  <i class="fas fa-hospital-user"></i> <span>CareSync EMR</span>
+                </a>
+              </li>
+              <li class="sidebar-nav-item">
+                <a href="#case-techpulse" class="sidebar-nav-link">
+                  <i class="fas fa-newspaper"></i> <span>Tech Pulse AI</span>
+                </a>
+              </li>
+              <li class="sidebar-nav-item">
+                <a href="#case-hurry" class="sidebar-nav-link">
+                  <i class="fas fa-utensils"></i> <span>Hurry &amp; Thyme</span>
+                </a>
+              </li>
+              <li class="sidebar-nav-item">
+                <a href="#case-haruna" class="sidebar-nav-link">
+                  <i class="fas fa-school"></i> <span>Haruna Rasheed</span>
+                </a>
+              </li>
+              <li class="sidebar-nav-item">
+                <a href="#case-alhuda" class="sidebar-nav-link">
+                  <i class="fas fa-print"></i> <span>Al-Huda Prints</span>
+                </a>
+              </li>
+            </ul>
+
+            <div class="sidebar-heading olive">Navigation</div>
+            <ul class="sidebar-nav-list">
+              <li class="sidebar-nav-item">
+                <a href="#about" class="sidebar-nav-link">
+                  <i class="fas fa-user"></i> <span>About &amp; Background</span>
+                </a>
+              </li>
+              <li class="sidebar-nav-item">
+                <a href="#skills" class="sidebar-nav-link">
+                  <i class="fas fa-code"></i> <span>Technical Stack</span>
+                </a>
+              </li>
+              <li class="sidebar-nav-item">
+                <a href="#education" class="sidebar-nav-link">
+                  <i class="fas fa-graduation-cap"></i> <span>Credentials &amp; CV</span>
+                </a>
+              </li>
+              <li class="sidebar-nav-item">
+                <a href="#contact" class="sidebar-nav-link">
+                  <i class="fas fa-envelope"></i> <span>Let's Collaborate</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right Main Projects Feed -->
+        <div class="col-lg-9">
+
+          <!-- Category Filter Tabs -->
+          <div class="project-filters reveal">
+            <button class="filter-btn active" data-filter="all">All Projects (7)</button>
+            <button class="filter-btn" data-filter="healthtech">HealthTech &amp; Clinical</button>
+            <button class="filter-btn" data-filter="fullstack">Full-Stack Platforms</button>
+            <button class="filter-btn" data-filter="frontend">Frontend &amp; APIs</button>
+          </div>
+
+          <div class="case-study-list" id="projectsGrid">
+
+            <!-- CASE 1: FHIR Chart Viewer (HealthTech) -->
+            <div class="project-item reveal" data-category="healthtech" id="case-fhir">
+              <div class="main-card-elevation">
+                <div class="case-study-card-inner">
+                  <div class="case-study-thumb-box" onclick="openModal(6)">
+                    <img src="fhir.png" alt="HL7 FHIR Patient Chart Viewer" />
+                    <div class="case-study-badge">HealthTech • HL7 FHIR</div>
+                    <div class="case-study-zoom-btn"><i class="fas fa-expand-alt"></i></div>
+                  </div>
+                  <div class="case-study-content">
+                    <div>
+                      <div class="case-study-role-label">HealthTech Interoperability</div>
+                      <h3 class="case-study-headline" onclick="openModal(6)">FHIR Patient Chart Viewer</h3>
+                      <p class="case-study-narrative">
+                        Production-ready HL7 FHIR R4 interoperability application rendering real-time clinical
+                        observations with a Node/Express proxy, defensive normalization, and a responsive React
+                        clinician dashboard.
+                      </p>
+                      <div class="case-study-tech-wrap">
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">HL7 FHIR R4</span>
+                        <span class="tech-tag">TailwindCSS</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="case-study-card-footer">
+                  <div class="card-footer-metric">
+                    <div class="metric-icon"><i class="fas fa-check"></i></div>
+                    <div>
+                      <div class="metric-text-small">Clinical Grade</div>
+                      <div class="metric-text-sub">HL7 FHIR R4 Verified</div>
+                    </div>
+                  </div>
+                  <div class="card-footer-actions">
+                    <a href="https://fhir-p71r.onrender.com/" target="_blank" rel="noopener" class="case-btn-live">
+                      <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+                    </a>
+                    <a href="https://github.com/salamatwuraola/FHIR" target="_blank" rel="noopener"
+                      class="case-btn-code">
+                      <i class="fab fa-github"></i> Code
+                    </a>
+                    <button onclick="openModal(6)" class="case-btn-modal" title="View Case Study">
+                      <i class="fas fa-circle-info"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <!-- CASE 2: CareSync EMR (HealthTech, FullStack) -->
+            <div class="project-item reveal" data-category="healthtech fullstack" id="case-caresync">
+              <div class="main-card-elevation olive-accent">
+                <div class="case-study-card-inner">
+                  <div class="case-study-thumb-box" onclick="openModal(4)">
+                    <img src="care.png" alt="Care Sync EMR Platform" />
+                    <div class="case-study-badge">HealthTech • EMR</div>
+                    <div class="case-study-zoom-btn"><i class="fas fa-expand-alt"></i></div>
+                  </div>
+                  <div class="case-study-content">
+                    <div>
+                      <div class="case-study-role-label">Hospital Systems &amp; Outpatient</div>
+                      <h3 class="case-study-headline" onclick="openModal(4)">Care Sync EMR &amp; Appointment System</h3>
+                      <p class="case-study-narrative">
+                        Full-stack Electronic Medical Record and outpatient appointment scheduling platform engineered
+                        to minimize clinic waiting times and streamline patient record management across hospital
+                        departments.
+                        admin@caresync.local, Admin@123
+                      </p>
+                      <div class="case-study-tech-wrap">
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Bootstrap</span>
+                        <span class="tech-tag">HTML5 / CSS3</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="case-study-card-footer">
+                  <div class="card-footer-metric">
+                    <div class="metric-icon"><i class="fas fa-hospital-user"></i></div>
+                    <div>
+                      <div class="metric-text-small">EMR &amp; Workflow</div>
+                      <div class="metric-text-sub">Outpatient Scheduling</div>
+                    </div>
+                  </div>
+                  <div class="card-footer-actions">
+                    <a href="https://caresync.free.je/login.php" target="_blank" rel="noopener" class="case-btn-live">
+                      <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+                    </a>
+                    <a href="https://github.com/salamatwuraola/CareSync" target="_blank" rel="noopener"
+                      class="case-btn-code">
+                      <i class="fab fa-github"></i> Code
+                    </a>
+                    <button onclick="openModal(4)" class="case-btn-modal" title="View Case Study">
+                      <i class="fas fa-circle-info"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CASE 3: Tech Pulse: AI News Digest (FullStack, Frontend) -->
+            <div class="project-item reveal" data-category="frontend fullstack" id="case-techpulse">
+              <div class="main-card-elevation">
+                <div class="case-study-card-inner">
+                  <div class="case-study-thumb-box" onclick="openModal(3)">
+                    <img src="tech.png" alt="Tech Pulse News Platform" />
+                    <div class="case-study-badge">AI &amp; REST API</div>
+                    <div class="case-study-zoom-btn"><i class="fas fa-expand-alt"></i></div>
+                  </div>
+                  <div class="case-study-content">
+                    <div>
+                      <div class="case-study-role-label">AI Integration &amp; APIs</div>
+                      <h3 class="case-study-headline" onclick="openModal(3)">Tech Pulse: AI News Digest</h3>
+                      <p class="case-study-narrative">
+                        Full-stack news aggregation platform integrating News API with Google Gemini AI for instant
+                        article synthesis, topic categorisation, and automated summaries generated in seconds.
+                      </p>
+                      <div class="case-study-tech-wrap">
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Gemini API</span>
+                        <span class="tech-tag">Node / Express</span>
+                        <span class="tech-tag">Vercel</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="case-study-card-footer">
+                  <div class="card-footer-metric">
+                    <div class="metric-icon"><i class="fas fa-robot"></i></div>
+                    <div>
+                      <div class="metric-text-small">Google Gemini AI</div>
+                      <div class="metric-text-sub">Instant Synthesis</div>
+                    </div>
+                  </div>
+                  <div class="card-footer-actions">
+                    <a href="https://tech-pulse-news-one.vercel.app/" target="_blank" rel="noopener"
+                      class="case-btn-live">
+                      <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+                    </a>
+                    <a href="https://github.com/salamatwuraola/Tech-Pulse" target="_blank" rel="noopener"
+                      class="case-btn-code">
+                      <i class="fab fa-github"></i> Code
+                    </a>
+                    <button onclick="openModal(3)" class="case-btn-modal" title="View Case Study">
+                      <i class="fas fa-circle-info"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CASE 4: Hurry & Thyme (Frontend) -->
+            <div class="project-item reveal" data-category="frontend" id="case-hurry">
+              <div class="main-card-elevation olive-accent">
+                <div class="case-study-card-inner">
+                  <div class="case-study-thumb-box" onclick="openModal(5)">
+                    <img src="Hurry&Thyme.png" alt="Hurry & Thyme Recipe Website" />
+                    <div class="case-study-badge">Web Application</div>
+                    <div class="case-study-zoom-btn"><i class="fas fa-expand-alt"></i></div>
+                  </div>
+                  <div class="case-study-content">
+                    <div>
+                      <div class="case-study-role-label">Culinary Web Platform</div>
+                      <h3 class="case-study-headline" onclick="openModal(5)">Hurry &amp; Thyme</h3>
+                      <p class="case-study-narrative">
+                        Fast, responsive culinary recipe web application featuring instant keyword search, nutrition
+                        breakdown, and dynamic dietary filtering for modern home cooks.
+                      </p>
+                      <div class="case-study-tech-wrap">
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">TailwindCSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Node.js</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="case-study-card-footer">
+                  <div class="card-footer-metric">
+                    <div class="metric-icon"><i class="fas fa-utensils"></i></div>
+                    <div>
+                      <div class="metric-text-small">Fast Discovery</div>
+                      <div class="metric-text-sub">Instant Dietary Search</div>
+                    </div>
+                  </div>
+                  <div class="card-footer-actions">
+                    <a href="https://hurry-and-thyme.onrender.com/" target="_blank" rel="noopener"
+                      class="case-btn-live">
+                      <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+                    </a>
+                    <a href="https://github.com/salamatwuraola/hurry-and-thyme" target="_blank" rel="noopener"
+                      class="case-btn-code">
+                      <i class="fab fa-github"></i> Code
+                    </a>
+                    <button onclick="openModal(5)" class="case-btn-modal" title="View Case Study">
+                      <i class="fas fa-circle-info"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CASE 5: Haruna Rasheed Centre (FullStack) -->
+            <div class="project-item reveal" data-category="fullstack" id="case-haruna">
+              <div class="main-card-elevation">
+                <div class="case-study-card-inner">
+                  <div class="case-study-thumb-box" onclick="openModal(2)">
+                    <img src="Har.jpeg" alt="Haruna Rasheed Centre School Platform" />
+                    <div class="case-study-badge">Portal • Fintech</div>
+                    <div class="case-study-zoom-btn"><i class="fas fa-expand-alt"></i></div>
+                  </div>
+                  <div class="case-study-content">
+                    <div>
+                      <div class="case-study-role-label">Academic Portal &amp; Fintech</div>
+                      <h3 class="case-study-headline" onclick="openModal(2)">Haruna Rasheed Centre Portal</h3>
+                      <p class="case-study-narrative">
+                        Comprehensive academic management platform supporting multi-role authentication (superadmin,
+                        admin, student), automated grade generation, and integrated KoraPay fee settlement.
+                      </p>
+                      <div class="case-study-tech-wrap">
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">KoraPay</span>
+                        <span class="tech-tag">Bootstrap</span>
+                        <span class="tech-tag">JavaScript</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="case-study-card-footer">
+                  <div class="card-footer-metric">
+                    <div class="metric-icon"><i class="fas fa-credit-card"></i></div>
+                    <div>
+                      <div class="metric-text-small">KoraPay Gateway</div>
+                      <div class="metric-text-sub">Automated Result Sheets</div>
+                    </div>
+                  </div>
+                  <div class="card-footer-actions">
+                    <a href="https://mhr.freedev.app/" target="_blank" rel="noopener" class="case-btn-live">
+                      <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+                    </a>
+                    <button onclick="openModal(2)" class="case-btn-modal ms-auto" title="View Case Study">
+                      <i class="fas fa-circle-info"></i> Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CASE 6: Al-Huda Prints (Frontend) -->
+            <div class="project-item reveal" data-category="frontend" id="case-alhuda">
+              <div class="main-card-elevation olive-accent">
+                <div class="case-study-card-inner">
+                  <div class="case-study-thumb-box" onclick="openModal(0)">
+                    <img src="logo.png" alt="Al-Huda Prints Platform" />
+                    <div class="case-study-badge">Commercial Web</div>
+                    <div class="case-study-zoom-btn"><i class="fas fa-expand-alt"></i></div>
+                  </div>
+                  <div class="case-study-content">
+                    <div>
+                      <div class="case-study-role-label">Commercial Enterprise</div>
+                      <h3 class="case-study-headline" onclick="openModal(0)">Al-Huda Prints Nigeria Ltd</h3>
+                      <p class="case-study-narrative">
+                        Commercial enterprise web presence built with responsive components, dynamic print catalogue
+                        galleries, service calculators, and direct customer quote routing channels.
+                      </p>
+                      <div class="case-study-tech-wrap">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Bootstrap</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="case-study-card-footer">
+                  <div class="card-footer-metric">
+                    <div class="metric-icon"><i class="fas fa-print"></i></div>
+                    <div>
+                      <div class="metric-text-small">Commercial Web</div>
+                      <div class="metric-text-sub">Dynamic Catalogue</div>
+                    </div>
+                  </div>
+                  <div class="card-footer-actions">
+                    <a href="https://al-huda-prints.vercel.app/" target="_blank" rel="noopener" class="case-btn-live">
+                      <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+                    </a>
+                    <a href="https://github.com/salamatwuraola/Al-Huda-Prints" target="_blank" rel="noopener"
+                      class="case-btn-code">
+                      <i class="fab fa-github"></i> Code
+                    </a>
+                    <button onclick="openModal(0)" class="case-btn-modal" title="View Case Study">
+                      <i class="fas fa-circle-info"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -175,76 +659,85 @@
   <!-- ── ABOUT & THE HEALTHTECH EDGE ── -->
   <section id="about">
     <div class="container">
-      <div class="row mb-5">
-        <div class="col-lg-7 reveal-left">
-          <div class="section-label">The Background & Edge</div>
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-6 reveal-left">
+          <div class="section-label">Background &amp; Edge</div>
           <h2 class="section-title">
-            Bridging <span class="gradient-text">Public Health</span> & Software Engineering
+            Bridging <span class="coral-text">Health Science</span> &amp; Software Architecture
           </h2>
-          <p class="section-desc">
-            Unlike typical developers, I bring an advanced scientific research background (Master of Public Health in
-            Epidemiology & Biostatistics) paired with rigorous full-stack development skills. This unique blend empowers
-            me to architect healthcare and data-intensive systems with unmatched attention to data integrity,
-            compliance, and clinical utility.
+          <p class="section-desc mb-4">
+            Unlike traditional software developers, I bring an advanced scientific research background paired with
+            rigorous full-stack development skills. This unique combination allows me to architect healthcare and
+            data-intensive systems with unmatched attention to data integrity, compliance, and clinical utility.
           </p>
-        </div>
-      </div>
-
-      <div class="row gy-4">
-        <div class="col-md-4 reveal-scale">
-          <div class="about-card">
-            <div class="about-icon emerald">
-              <i class="fas fa-laptop-medical"></i>
-            </div>
-            <h3 class="about-title">HealthTech & Interoperability</h3>
-            <p class="about-text">
-              Hands-on expertise implementing HL7 FHIR R4 standards, clinical proxies, defensive data normalization, EMR
-              record flows, and HIPAA-conscious architectures that connect doctors, patients, and health systems.
-            </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="Salamat's_CV.pdf" class="btn-primary-custom" download>
+              <i class="fas fa-file-pdf"></i> Download Official CV
+            </a>
+            <a href="#contact" class="btn-outline-custom">
+              <i class="fas fa-envelope"></i> Contact Directly
+            </a>
           </div>
         </div>
 
-        <div class="col-md-4 reveal-scale delay-2">
-          <div class="about-card">
-            <div class="about-icon">
-              <i class="fas fa-layer-group"></i>
+        <div class="col-lg-6 reveal-right">
+          <div class="about-split-card">
+            <div class="about-feature-item">
+              <div class="about-feature-icon coral">
+                <i class="fas fa-laptop-medical"></i>
+              </div>
+              <div>
+                <h3 class="about-feature-title">HealthTech &amp; Interoperability</h3>
+                <p class="about-feature-desc">
+                  Hands-on expertise implementing HL7 FHIR R4 standards, clinical observation pipelines, defensive
+                  normalization, and HIPAA-conscious architectures.
+                </p>
+              </div>
             </div>
-            <h3 class="about-title">Robust Full-Stack Web</h3>
-            <p class="about-text">
-              Building end-to-end applications with modern frontend frameworks (React, Vue, TypeScript) backed by solid
-              RESTful servers (Node.js, Express, Python, PHP) and optimized relational & NoSQL databases.
-            </p>
-          </div>
-        </div>
 
-        <div class="col-md-4 reveal-scale delay-4">
-          <div class="about-card">
-            <div class="about-icon purple">
-              <i class="fas fa-chart-line"></i>
+            <div class="about-feature-item">
+              <div class="about-feature-icon">
+                <i class="fas fa-layer-group"></i>
+              </div>
+              <div>
+                <h3 class="about-feature-title">Robust Full-Stack Web</h3>
+                <p class="about-feature-desc">
+                  Building responsive web applications in React and TypeScript backed by scalable RESTful APIs in
+                  Node.js, Express, Python, and relational database systems.
+                </p>
+              </div>
             </div>
-            <h3 class="about-title">Epidemiology & Data Rigor</h3>
-            <p class="about-text">
-              Trained in biostatistical analysis and epidemiological modeling. I treat data precision and workflow
-              validation not as an afterthought, but as the foundational core of every digital product.
-            </p>
+
+            <div class="about-feature-item">
+              <div class="about-feature-icon coral">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div>
+                <h3 class="about-feature-title">Epidemiology &amp; Biostatistics</h3>
+                <p class="about-feature-desc">
+                  Postgraduate training in epidemiological modeling and statistical analysis, treating data precision
+                  not as an afterthought, but as the foundational core.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── SKILLS SECTION ── -->
+  <!-- ── SKILLS & DOMAIN MATRIX ── -->
   <section id="skills">
     <div class="container">
       <div class="row mb-5">
         <div class="col-lg-6 reveal-left">
           <div class="section-label">Technical Stack</div>
-          <h2 class="section-title">Skills & <span class="gradient-text">Core Competencies</span></h2>
+          <h2 class="section-title">Skills &amp; <span class="coral-text">Core Competencies</span></h2>
         </div>
         <div class="col-lg-6 d-flex align-items-end reveal-right">
           <p class="section-desc">
-            A versatile technology toolkit designed for clean code, high security, resilient database architectures, and
-            seamless user experiences.
+            A versatile technology toolkit designed for clean code, clinical-grade security, resilient database
+            architectures, and seamless user experiences.
           </p>
         </div>
       </div>
@@ -254,8 +747,8 @@
         <div class="col-md-6 col-lg-3 reveal">
           <div class="skill-box">
             <div class="skill-header">
-              <div class="skill-icon"><i class="fas fa-heartbeat" style="color:var(--emerald);"></i></div>
-              <div class="skill-box-title">HealthTech & Standards</div>
+              <div class="skill-icon"><i class="fas fa-heartbeat"></i></div>
+              <div class="skill-box-title">HealthTech &amp; Standards</div>
             </div>
             <div class="skill-pills-wrap">
               <span class="skill-pill"><i class="fas fa-check"></i> HL7 FHIR R4</span>
@@ -268,10 +761,10 @@
         </div>
 
         <!-- 2. Frontend -->
-        <div class="col-md-6 col-lg-3 reveal">
+        <div class="col-md-6 col-lg-3 reveal delay-1">
           <div class="skill-box">
             <div class="skill-header">
-              <div class="skill-icon"><i class="fab fa-react" style="color:#38bdf8;"></i></div>
+              <div class="skill-icon coral"><i class="fab fa-react"></i></div>
               <div class="skill-box-title">Frontend Engineering</div>
             </div>
             <div class="skill-pills-wrap">
@@ -281,17 +774,17 @@
               <span class="skill-pill"><i class="fab fa-vuejs"></i> Vue.js</span>
               <span class="skill-pill"><i class="fas fa-wind"></i> TailwindCSS</span>
               <span class="skill-pill"><i class="fab fa-bootstrap"></i> Bootstrap</span>
-              <span class="skill-pill"><i class="fab fa-html5"></i> HTML5 & CSS3</span>
+              <span class="skill-pill"><i class="fab fa-html5"></i> HTML5 &amp; CSS3</span>
             </div>
           </div>
         </div>
 
         <!-- 3. Backend -->
-        <div class="col-md-6 col-lg-3 reveal">
+        <div class="col-md-6 col-lg-3 reveal delay-2">
           <div class="skill-box">
             <div class="skill-header">
-              <div class="skill-icon"><i class="fas fa-server" style="color:#22c55e;"></i></div>
-              <div class="skill-box-title">Backend & APIs</div>
+              <div class="skill-icon"><i class="fas fa-server"></i></div>
+              <div class="skill-box-title">Backend &amp; APIs</div>
             </div>
             <div class="skill-pills-wrap">
               <span class="skill-pill"><i class="fab fa-node-js"></i> Node.js</span>
@@ -299,17 +792,17 @@
               <span class="skill-pill"><i class="fab fa-python"></i> Python / Django</span>
               <span class="skill-pill"><i class="fab fa-php"></i> PHP</span>
               <span class="skill-pill"><i class="fas fa-plug"></i> RESTful APIs</span>
-              <span class="skill-pill"><i class="fas fa-shield-halved"></i> JWT & Auth</span>
+              <span class="skill-pill"><i class="fas fa-shield-halved"></i> JWT &amp; Auth</span>
             </div>
           </div>
         </div>
 
         <!-- 4. DB & Cloud -->
-        <div class="col-md-6 col-lg-3 reveal">
+        <div class="col-md-6 col-lg-3 reveal delay-3">
           <div class="skill-box">
             <div class="skill-header">
-              <div class="skill-icon"><i class="fas fa-database" style="color:#a855f7;"></i></div>
-              <div class="skill-box-title">Databases & DevOps</div>
+              <div class="skill-icon coral"><i class="fas fa-database"></i></div>
+              <div class="skill-box-title">Databases &amp; DevOps</div>
             </div>
             <div class="skill-pills-wrap">
               <span class="skill-pill"><i class="fas fa-database"></i> PostgreSQL</span>
@@ -325,278 +818,17 @@
     </div>
   </section>
 
-  <!-- ── PROJECTS SECTION ── -->
-  <section id="projects">
-    <div class="container">
-      <div class="row mb-4">
-        <div class="col-lg-7 reveal-left">
-          <div class="section-label">Featured Works</div>
-          <h2 class="section-title">Selected <span class="gradient-text">Projects</span></h2>
-          <p class="section-desc">
-            Production web solutions, from interoperable healthcare charts to full-stack portals and intelligent API
-            platforms.
-          </p>
-        </div>
-      </div>
-
-      <!-- Category Filter Tabs -->
-      <div class="project-filters reveal">
-        <button class="filter-btn active" data-filter="all">All Projects (7)</button>
-        <button class="filter-btn" data-filter="healthtech">HealthTech & Clinical</button>
-        <button class="filter-btn" data-filter="fullstack">Full-Stack Platforms</button>
-        <button class="filter-btn" data-filter="frontend">Frontend & APIs</button>
-      </div>
-
-      <div class="row gy-4" id="projectsGrid">
-
-        <!-- PROJECT 1: FHIR (HealthTech) -->
-        <div class="col-md-6 col-lg-4 project-item reveal" data-category="healthtech">
-          <div class="project-card">
-            <div class="project-thumb-wrap" onclick="openModal(6)">
-              <img src="fhir.png" alt="HL7 FHIR Patient Chart Viewer" />
-              <div class="project-badge">HealthTech • HL7 FHIR</div>
-              <div class="project-zoom-indicator"><i class="fas fa-expand-alt"></i></div>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title" onclick="openModal(6)">FHIR Patient Chart Viewer</h3>
-              <p class="project-desc">
-                Production-ready HL7 FHIR R4 interoperability project rendering real-time clinical observations with a
-                Node/Express proxy, defensive normalization, and a React dashboard.
-              </p>
-              <div class="project-tech-pills">
-                <span class="tech-tag">React.js</span>
-                <span class="tech-tag">HL7 FHIR R4</span>
-                <span class="tech-tag">TailwindCSS</span>
-                <span class="tech-tag">Node.js</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://fhir-p71r.onrender.com/" target="_blank" rel="noopener" class="project-btn-link live">
-                  <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
-                </a>
-                <a href="https://github.com/salamatwuraola/FHIR" target="_blank" rel="noopener"
-                  class="project-btn-link code">
-                  <i class="fab fa-github"></i> Code
-                </a>
-                <button onclick="openModal(6)" class="project-btn-link modal-btn" title="View Case Study">
-                  <i class="fas fa-circle-info"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- PROJECT 2: CareSync EMR (HealthTech, FullStack) -->
-        <div class="col-md-6 col-lg-4 project-item reveal" data-category="healthtech fullstack">
-          <div class="project-card">
-            <div class="project-thumb-wrap" onclick="openModal(4)">
-              <img src="care.png" alt="Care Sync EMR Platform" />
-              <div class="project-badge">HealthTech • EMR</div>
-              <div class="project-zoom-indicator"><i class="fas fa-expand-alt"></i></div>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title" onclick="openModal(4)">Care Sync EMR & Appointment System</h3>
-              <p class="project-desc">
-                Full-stack Electronic Medical Record and outpatient appointment scheduling system engineered to minimize
-                clinic waiting times and streamline patient record management.
-              </p>
-              <div class="project-tech-pills">
-                <span class="tech-tag">PHP</span>
-                <span class="tech-tag">MySQL</span>
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">Bootstrap</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://caresync.free.je/login.php" target="_blank" rel="noopener"
-                  class="project-btn-link live">
-                  <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
-                </a>
-                <a href="https://github.com/salamatwuraola/CareSync" target="_blank" rel="noopener"
-                  class="project-btn-link code">
-                  <i class="fab fa-github"></i> Code
-                </a>
-                <button onclick="openModal(4)" class="project-btn-link modal-btn" title="View Case Study">
-                  <i class="fas fa-circle-info"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- PROJECT 3: Tech Pulse (FullStack, Frontend) -->
-        <div class="col-md-6 col-lg-4 project-item reveal" data-category="frontend fullstack">
-          <div class="project-card">
-            <div class="project-thumb-wrap" onclick="openModal(3)">
-              <img src="tech.png" alt="Tech Pulse News Platform" />
-              <div class="project-badge">AI & REST API</div>
-              <div class="project-zoom-indicator"><i class="fas fa-expand-alt"></i></div>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title" onclick="openModal(3)">Tech Pulse: AI News Digest</h3>
-              <p class="project-desc">
-                Full-stack news aggregation platform integrating News API with Google Gemini AI for instant article
-                synthesis and automated news summaries in seconds.
-              </p>
-              <div class="project-tech-pills">
-                <span class="tech-tag">React.js</span>
-                <span class="tech-tag">TypeScript</span>
-                <span class="tech-tag">Gemini API</span>
-                <span class="tech-tag">Node/Express</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://tech-pulse-news-one.vercel.app/" target="_blank" rel="noopener"
-                  class="project-btn-link live">
-                  <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
-                </a>
-                <a href="https://github.com/salamatwuraola/Tech-Pulse" target="_blank" rel="noopener"
-                  class="project-btn-link code">
-                  <i class="fab fa-github"></i> Code
-                </a>
-                <button onclick="openModal(3)" class="project-btn-link modal-btn" title="View Case Study">
-                  <i class="fas fa-circle-info"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- PROJECT 4: Hurry & Thyme (Frontend) -->
-        <div class="col-md-6 col-lg-4 project-item reveal" data-category="frontend">
-          <div class="project-card">
-            <div class="project-thumb-wrap" onclick="openModal(5)">
-              <img src="Hurry&Thyme.png" alt="Hurry & Thyme Recipe Website" />
-              <div class="project-badge">Web Application</div>
-              <div class="project-zoom-indicator"><i class="fas fa-expand-alt"></i></div>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title" onclick="openModal(5)">Hurry & Thyme</h3>
-              <p class="project-desc">
-                Fast, responsive culinary recipe web application featuring instant keyword search, nutrition breakdown,
-                and dynamic dietary filtering.
-              </p>
-              <div class="project-tech-pills">
-                <span class="tech-tag">React.js</span>
-                <span class="tech-tag">TailwindCSS</span>
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">Node.js</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://hurry-and-thyme.onrender.com/" target="_blank" rel="noopener"
-                  class="project-btn-link live">
-                  <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
-                </a>
-                <a href="https://github.com/salamatwuraola/hurry-and-thyme" target="_blank" rel="noopener"
-                  class="project-btn-link code">
-                  <i class="fab fa-github"></i> Code
-                </a>
-                <button onclick="openModal(5)" class="project-btn-link modal-btn" title="View Case Study">
-                  <i class="fas fa-circle-info"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- PROJECT 5: Haruna Rasheed Centre (FullStack) -->
-        <div class="col-md-6 col-lg-4 project-item reveal" data-category="fullstack">
-          <div class="project-card">
-            <div class="project-thumb-wrap" onclick="openModal(2)">
-              <img src="Har.jpeg" alt="Haruna Rasheed Centre School Platform" />
-              <div class="project-badge">Portal • Fintech</div>
-              <div class="project-zoom-indicator"><i class="fas fa-expand-alt"></i></div>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title" onclick="openModal(2)">Haruna Rasheed Centre Portal</h3>
-              <p class="project-desc">
-                Comprehensive academic management platform supporting multi-role authentication (superadmin, admin,
-                student), automated grade generation, and integrated KoraPay fee settlement.
-              </p>
-              <div class="project-tech-pills">
-                <span class="tech-tag">PHP</span>
-                <span class="tech-tag">MySQL</span>
-                <span class="tech-tag">KoraPay</span>
-                <span class="tech-tag">Bootstrap</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://mhr.freedev.app/" target="_blank" rel="noopener" class="project-btn-link live">
-                  <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
-                </a>
-                <button onclick="openModal(2)" class="project-btn-link modal-btn ms-auto" title="View Case Study">
-                  <i class="fas fa-circle-info"></i> Details
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- PROJECT 6: Al-Huda Prints (Frontend) -->
-        <div class="col-md-6 col-lg-4 project-item reveal" data-category="frontend">
-          <div class="project-card">
-            <div class="project-thumb-wrap" onclick="openModal(0)">
-              <img src="logo.png" alt="Al-Huda Prints Platform" />
-              <div class="project-badge">Commercial Web</div>
-              <div class="project-zoom-indicator"><i class="fas fa-expand-alt"></i></div>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title" onclick="openModal(0)">Al-Huda Prints Nigeria Ltd</h3>
-              <p class="project-desc">
-                Commercial enterprise web presence built with responsive components, dynamic print catalogue galleries,
-                service calculators, and direct customer quote channels.
-              </p>
-              <div class="project-tech-pills">
-                <span class="tech-tag">HTML5</span>
-                <span class="tech-tag">CSS3</span>
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">Bootstrap</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://al-huda-prints.vercel.app/" target="_blank" rel="noopener"
-                  class="project-btn-link live">
-                  <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
-                </a>
-                <a href="https://github.com/salamatwuraola/Al-Huda-Prints" target="_blank" rel="noopener"
-                  class="project-btn-link code">
-                  <i class="fab fa-github"></i> Code
-                </a>
-                <button onclick="openModal(0)" class="project-btn-link modal-btn" title="View Case Study">
-                  <i class="fas fa-circle-info"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ── PROJECT DETAILS MODAL (SOLID SURFACES) ── -->
-  <div class="project-modal-backdrop" id="projectModal" onclick="closeModalOnBackdrop(event)">
-    <div class="project-modal" id="projectModalInner">
-      <button class="modal-close" onclick="closeModal()" aria-label="Close modal">
-        <i class="fas fa-times"></i>
-      </button>
-      <img class="modal-featured-img" id="modalImg" src="" alt="Project Preview" />
-      <div class="modal-body-content">
-        <div class="modal-project-tag" id="modalTag"></div>
-        <h2 class="modal-title-text" id="modalTitle"></h2>
-        <p class="modal-summary" id="modalSummary"></p>
-        <div class="project-tech-pills mt-3" id="modalTech"></div>
-        <div class="modal-links" id="modalLinks"></div>
-      </div>
-    </div>
-  </div>
-
   <!-- ── EDUCATION & CREDENTIALS ── -->
   <section id="education">
     <div class="container">
       <div class="row mb-5">
         <div class="col-lg-6 reveal-left">
-          <div class="section-label">Academic & Technical Credentials</div>
-          <h2 class="section-title">Education & <span class="gradient-text">Qualifications</span></h2>
+          <div class="section-label">Academic &amp; Technical Credentials</div>
+          <h2 class="section-title">Education &amp; <span class="coral-text">Qualifications</span></h2>
         </div>
         <div class="col-lg-6 d-flex align-items-end reveal-right">
           <p class="section-desc">
-            Combining postgraduate health science rigor with accredited software engineering training.
+            Combining postgraduate health science rigor with accredited professional software engineering competence.
           </p>
         </div>
       </div>
@@ -610,29 +842,29 @@
               <div class="edu-card">
                 <div class="edu-year">2022 — 2024</div>
                 <h3 class="edu-degree">Master of Public Health (MPH)</h3>
-                <div class="edu-school">Al-Hikmah University, Nigeria • Specialization in Epidemiology & Biostatistics
-                </div>
-                <div class="edu-badge-tag">Epidemiological Research & Statistical Modeling</div>
+                <div class="edu-school">Al-Hikmah University, Nigeria • Specialization in Epidemiology &amp;
+                  Biostatistics</div>
+                <div class="edu-badge-tag">Epidemiological Research &amp; Statistical Modeling</div>
               </div>
             </div>
 
             <!-- Degree 2 -->
-            <div class="edu-item reveal">
-              <div class="edu-dot"><i class="fas fa-dna"></i></div>
+            <div class="edu-item reveal delay-1">
+              <div class="edu-dot olive"><i class="fas fa-dna"></i></div>
               <div class="edu-card">
-                <div class="edu-year">2016 — 2020</div>
+                <div class="edu-year olive">2016 — 2020</div>
                 <h3 class="edu-degree">B.Sc. Zoology</h3>
                 <div class="edu-school">University of Ilorin, Nigeria</div>
-                <div class="edu-badge-tag">Biological Sciences & Research Foundations</div>
+                <div class="edu-badge-tag">Biological Sciences &amp; Research Foundations</div>
               </div>
             </div>
 
-            <!-- Cert 1 & 2 -->
-            <div class="edu-item reveal">
+            <!-- Cert 1 -->
+            <div class="edu-item reveal delay-2">
               <div class="edu-dot"><i class="fas fa-code"></i></div>
               <div class="edu-card">
                 <div class="edu-year">2025</div>
-                <h3 class="edu-degree">Professional Software Development (Frontend & Backend)</h3>
+                <h3 class="edu-degree">Professional Software Development (Frontend &amp; Backend)</h3>
                 <div class="edu-school">Ogunjobi Tech Hub</div>
                 <div class="edu-badge-tag">Full-Stack Architecture, REST APIs, Databases</div>
               </div>
@@ -642,13 +874,13 @@
 
         <!-- Highlight Credentials Card -->
         <div class="col-lg-5">
-          <div class="skill-box reveal text-center p-4">
+          <div class="credentials-highlight-card reveal text-center">
             <div class="mb-3">
-              <i class="fas fa-certificate" style="font-size:2.5rem;color:var(--accent);"></i>
+              <i class="fas fa-award" style="font-size:2.8rem;color:var(--coral);"></i>
             </div>
-            <h3 class="about-title mb-2">Verified Technical Competence</h3>
-            <p class="about-text mb-4">
-              Equipped with deep domain knowledge across healthcare informatics, data warehousing, and modern
+            <h3 class="highlight-title mb-2">Verified Technical Competence</h3>
+            <p class="highlight-desc mb-4">
+              Equipped with deep domain expertise across healthcare informatics, data warehousing, and modern
               JavaScript/Python software stacks.
             </p>
             <div class="d-flex justify-content-center gap-3">
@@ -665,14 +897,14 @@
   <!-- ── CONTACT SECTION ── -->
   <section id="contact">
     <div class="container">
-      <div class="contact-card reveal">
+      <div class="contact-editorial-card reveal">
         <div class="section-label justify-content-center">Let's Collaborate</div>
         <h2 class="section-title mt-2 mb-3">
-          Ready to build something <span class="gradient-text">remarkable?</span>
+          Ready to build something <span class="coral-text">remarkable?</span>
         </h2>
         <p class="section-desc mx-auto mb-4">
           Whether you need a specialized HealthTech engineer for HL7 FHIR integration, a full-stack developer for a
-          high-performance web platform, or an experienced contributor for your team — let's connect.
+          high-performance web platform, or a dedicated contributor for your team — let's connect.
         </p>
 
         <!-- One-Click Copy Email Box -->
@@ -687,7 +919,7 @@
           <a href="mailto:mustaphawuraola01@gmail.com" class="btn-primary-custom">
             <i class="fas fa-paper-plane"></i> Send Direct Email
           </a>
-          <a href="https://wa.me/2348132793491" target="_blank" rel="noopener" class="btn-emerald-custom">
+          <a href="https://wa.me/2348132793491" target="_blank" rel="noopener" class="btn-olive-custom">
             <i class="fab fa-whatsapp"></i> Chat on WhatsApp
           </a>
           <a href="Salamat's_CV.pdf" class="btn-outline-custom" download>
@@ -736,7 +968,7 @@
             Mustapha Salamat Wuraola<span>.</span>
           </div>
           <p class="footer-desc">
-            Full-Stack Engineer & HealthTech Specialist bridging clinical data systems with high-performance web
+            Full-Stack Engineer &amp; HealthTech Specialist bridging clinical data systems with high-performance web
             architecture.
           </p>
           <div class="footer-social">
@@ -753,10 +985,11 @@
         <div class="col-sm-6 col-lg-2 offset-lg-1">
           <div class="footer-heading">Navigation</div>
           <a href="#hero" class="footer-link"><i class="fas fa-chevron-right"></i> Home</a>
+          <a href="#highlights" class="footer-link"><i class="fas fa-chevron-right"></i> Highlights</a>
+          <a href="#projects" class="footer-link"><i class="fas fa-chevron-right"></i> Case Studies</a>
           <a href="#about" class="footer-link"><i class="fas fa-chevron-right"></i> About</a>
           <a href="#skills" class="footer-link"><i class="fas fa-chevron-right"></i> Skills</a>
-          <a href="#projects" class="footer-link"><i class="fas fa-chevron-right"></i> Projects</a>
-          <a href="#education" class="footer-link"><i class="fas fa-chevron-right"></i> Education</a>
+          <a href="#education" class="footer-link"><i class="fas fa-chevron-right"></i> Credentials</a>
           <a href="#contact" class="footer-link"><i class="fas fa-chevron-right"></i> Contact</a>
         </div>
 
@@ -764,8 +997,8 @@
           <div class="footer-heading">Specializations</div>
           <div class="footer-link"><i class="fas fa-check"></i> HL7 FHIR R4</div>
           <div class="footer-link"><i class="fas fa-check"></i> EMR Systems</div>
-          <div class="footer-link"><i class="fas fa-check"></i> Full-Stack React & Node</div>
-          <div class="footer-link"><i class="fas fa-check"></i> Python & SQL</div>
+          <div class="footer-link"><i class="fas fa-check"></i> Full-Stack React &amp; Node</div>
+          <div class="footer-link"><i class="fas fa-check"></i> Python &amp; SQL</div>
           <div class="footer-link"><i class="fas fa-check"></i> Health Informatics</div>
         </div>
 
@@ -781,7 +1014,7 @@
             <i class="fas fa-phone"></i> +234 813 279 3491
           </a>
           <div class="footer-link">
-            <i class="fas fa-map-marker-alt"></i> Ilorin, Nigeria • Available Globally (Remote & Relocation)
+            <i class="fas fa-map-marker-alt"></i> Ilorin, Nigeria • Available Globally (Remote &amp; Relocation)
           </div>
         </div>
       </div>
@@ -793,11 +1026,28 @@
           &copy; 2026 <span>Mustapha Salamat Wuraola</span>. All rights reserved.
         </div>
         <div>
-          Built with precision, performance & care.
+          Engineered with precision, performance &amp; care.
         </div>
       </div>
     </div>
   </footer>
+
+  <!-- ── PROJECT DETAILS MODAL (SOLID SURFACES) ── -->
+  <div class="project-modal-backdrop" id="projectModal" onclick="closeModalOnBackdrop(event)">
+    <div class="project-modal" id="projectModalInner">
+      <button class="modal-close" onclick="closeModal()" aria-label="Close modal">
+        <i class="fas fa-times"></i>
+      </button>
+      <img class="modal-featured-img" id="modalImg" src="" alt="Project Preview" />
+      <div class="modal-body-content">
+        <div class="modal-project-tag" id="modalTag"></div>
+        <h2 class="modal-title-text" id="modalTitle"></h2>
+        <p class="modal-summary" id="modalSummary"></p>
+        <div class="case-study-tech-wrap mt-3" id="modalTech"></div>
+        <div class="modal-links" id="modalLinks"></div>
+      </div>
+    </div>
+  </div>
 
   <script src="main.js"></script>
 </body>
